@@ -1,31 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n1M-gb-o7G">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="n1M-gb-o7G">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController extendedLayoutIncludesOpaqueBars="YES" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SC4-eX-9sh"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pab-aJ-wKG"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="42U-V3-6Ca">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="4y4-sz-N6Y"/>
-                                </connections>
-                            </scrollView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NK2-KN-pOZ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="T2C-zo-LdN"/>
@@ -35,20 +32,11 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NK2-KN-pOZ" firstAttribute="top" secondItem="42U-V3-6Ca" secondAttribute="top" id="1SD-bg-3N2"/>
-                            <constraint firstItem="NK2-KN-pOZ" firstAttribute="centerX" secondItem="42U-V3-6Ca" secondAttribute="centerX" id="7yt-cY-zk2"/>
-                            <constraint firstItem="NK2-KN-pOZ" firstAttribute="bottom" secondItem="42U-V3-6Ca" secondAttribute="bottom" id="EcB-xu-Lc2"/>
-                            <constraint firstItem="NK2-KN-pOZ" firstAttribute="trailing" secondItem="42U-V3-6Ca" secondAttribute="trailing" id="KU8-UC-wcj"/>
-                            <constraint firstItem="42U-V3-6Ca" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Otf-C6-Izu"/>
-                            <constraint firstItem="42U-V3-6Ca" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="P3n-aM-33D"/>
-                            <constraint firstItem="42U-V3-6Ca" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QmU-kf-zMG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="42U-V3-6Ca" secondAttribute="bottom" id="bRa-SG-wWo"/>
-                            <constraint firstItem="NK2-KN-pOZ" firstAttribute="width" secondItem="42U-V3-6Ca" secondAttribute="width" id="i4s-fv-E7e"/>
-                            <constraint firstItem="NK2-KN-pOZ" firstAttribute="centerY" secondItem="42U-V3-6Ca" secondAttribute="centerY" id="kZR-XE-FBL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="42U-V3-6Ca" secondAttribute="trailing" id="oZk-kr-85C"/>
-                            <constraint firstItem="NK2-KN-pOZ" firstAttribute="leading" secondItem="42U-V3-6Ca" secondAttribute="leading" id="zhj-t5-wnD"/>
+                            <constraint firstItem="NK2-KN-pOZ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="94r-L3-7rQ"/>
+                            <constraint firstItem="NK2-KN-pOZ" firstAttribute="top" secondItem="SC4-eX-9sh" secondAttribute="bottom" constant="-116" id="R0N-aS-KhO"/>
+                            <constraint firstItem="NK2-KN-pOZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bob-fq-u15"/>
+                            <constraint firstItem="Pab-aJ-wKG" firstAttribute="top" secondItem="NK2-KN-pOZ" secondAttribute="bottom" id="eVu-Od-VLu"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="dF2-hV-sbg"/>
                     <connections>

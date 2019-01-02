@@ -10,7 +10,6 @@
 
 @interface ViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property CGPoint currentOffset;
 
 @end
 

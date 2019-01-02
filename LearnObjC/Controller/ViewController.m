@@ -17,10 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.currentOffset = CGPointMake(0, 0);
-    self.navigationItem.largeTitleDisplayMode = UINavigationItemLargeTitleDisplayModeAlways;
-    self.title = @"title";
-    
+    self.title = @"titleViewController";
+
 }
 
 #pragma mark - UITableViewProtocols
@@ -31,36 +29,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell * cell = [[UITableViewCell alloc] init];
-    cell.backgroundColor = (indexPath.row%2 == 0 ? UIColor.lightGrayColor : UIColor.whiteColor);
+    cell.backgroundColor = (indexPath.row%2 == 0 ? [UIColor.lightGrayColor colorWithAlphaComponent:0.3] : UIColor.whiteColor);
     return cell;
     
-}
-
-#pragma mark - UIScrollViewDelegate
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    NSLog(@"(%f, %f)", scrollView.contentOffset.x, scrollView.contentOffset.y);
-    
-}
-
-- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
-    if(self.currentOffset.y < scrollView.contentOffset.y){
-        NSLog(@"UP");
-//        [self.navigationController setNavigationBarHidden:YES animated:YES];
-//        self.navigationController.navigationBar.prefersLargeTitles = NO;
-        [self.navigationController.navigationBar setPrefersLargeTitles:NO];
-
-    } else {
-        NSLog(@"DOWN");
-//        [self.navigationController setNavigationBarHidden:NO animated:YES];
-//        self.navigationController.navigationBar.prefersLargeTitles = YES;
-        [self.navigationController.navigationBar setPrefersLargeTitles:YES];
-        
-    }
-}
-
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-    self.currentOffset = scrollView.contentOffset;
-
 }
 
 @end
