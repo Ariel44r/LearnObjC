@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "LearnObjC-Swift.h"
 
 @interface ViewController ()
 
@@ -17,13 +18,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.title = @"titleViewController";
-
+    self.title = @"title";
+    
+    APIManager* apiManager = [[APIManager alloc] init];
+    [apiManager getSocioProTreeWithParameters:[NSDictionary new] completion:^(SocioProTreeResponse* socioProResponse){
+        NSLog(@"%@", socioProResponse);
+        
+    }];
 }
 
 #pragma mark - UITableViewProtocols
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 50;
+    
     
 }
 

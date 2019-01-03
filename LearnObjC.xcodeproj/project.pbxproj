@@ -15,6 +15,17 @@
 		B072E61221BCEBE600752CF0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B072E61121BCEBE600752CF0 /* main.m */; };
 		B072E61C21BCEBE700752CF0 /* LearnObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B072E61B21BCEBE700752CF0 /* LearnObjCTests.m */; };
 		B072E62721BCEBE700752CF0 /* LearnObjCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B072E62621BCEBE700752CF0 /* LearnObjCUITests.m */; };
+		B09C3F2021DD3D1D0093C10F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09C3F1F21DD3D1D0093C10F /* UIViewExtension.swift */; };
+		B09C3F2421DD403A0093C10F /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09C3F2321DD403A0093C10F /* APIManager.swift */; };
+		B09C3F2A21DD419E0093C10F /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09C3F2921DD419E0093C10F /* BaseResponse.swift */; };
+		B09C3F2C21DD43500093C10F /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09C3F2B21DD43500093C10F /* WebService.swift */; };
+		B09C3F2E21DD43C60093C10F /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09C3F2D21DD43C60093C10F /* App.swift */; };
+		B09C3F3021DD47940093C10F /* AlertcontrollerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09C3F2F21DD47940093C10F /* AlertcontrollerManager.swift */; };
+		B09C3F3221DD492C0093C10F /* ActivityIndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09C3F3121DD492C0093C10F /* ActivityIndicatorManager.swift */; };
+		B09C3F3621DDDC0C0093C10F /* CabResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09C3F3521DDDC0C0093C10F /* CabResponse.swift */; };
+		B09C3F3821DDE5CE0093C10F /* SocioProTreeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09C3F3721DDE5CE0093C10F /* SocioProTreeResponse.swift */; };
+		B09C3F3A21DDF3C60093C10F /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09C3F3921DDF3C60093C10F /* JSONManager.swift */; };
+		B09C3F3C21DDF4DD0093C10F /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09C3F3B21DDF4DD0093C10F /* Operators.swift */; };
 		B0F4D03621DAA102004E9692 /* RouterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F4D03521DAA102004E9692 /* RouterViewController.m */; };
 		B4C706A54B7C9EC9ADB6A79B /* libPods-LearnObjCUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2656BAEF50E989C1C9A642A /* libPods-LearnObjCUITests.a */; };
 		C68E5F382017F13EFA0EFB7B /* libPods-LearnObjCTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6883641FCB543BB5E2317425 /* libPods-LearnObjCTests.a */; };
@@ -60,6 +71,18 @@
 		B072E62221BCEBE700752CF0 /* LearnObjCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnObjCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B072E62621BCEBE700752CF0 /* LearnObjCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearnObjCUITests.m; sourceTree = "<group>"; };
 		B072E62821BCEBE700752CF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B09C3F1E21DD3D1C0093C10F /* LearnObjC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LearnObjC-Bridging-Header.h"; sourceTree = "<group>"; };
+		B09C3F1F21DD3D1D0093C10F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		B09C3F2321DD403A0093C10F /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		B09C3F2921DD419E0093C10F /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		B09C3F2B21DD43500093C10F /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		B09C3F2D21DD43C60093C10F /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		B09C3F2F21DD47940093C10F /* AlertcontrollerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertcontrollerManager.swift; sourceTree = "<group>"; };
+		B09C3F3121DD492C0093C10F /* ActivityIndicatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorManager.swift; sourceTree = "<group>"; };
+		B09C3F3521DDDC0C0093C10F /* CabResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabResponse.swift; sourceTree = "<group>"; };
+		B09C3F3721DDE5CE0093C10F /* SocioProTreeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocioProTreeResponse.swift; sourceTree = "<group>"; };
+		B09C3F3921DDF3C60093C10F /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
+		B09C3F3B21DDF4DD0093C10F /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		B0F4D03421DAA102004E9692 /* RouterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RouterViewController.h; sourceTree = "<group>"; };
 		B0F4D03521DAA102004E9692 /* RouterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RouterViewController.m; sourceTree = "<group>"; };
 		B2656BAEF50E989C1C9A642A /* libPods-LearnObjCUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LearnObjCUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,12 +170,17 @@
 				B072E60221BCEBE500752CF0 /* AppDelegate.h */,
 				B072E60321BCEBE500752CF0 /* AppDelegate.m */,
 				B0F4D03921DAA134004E9692 /* View */,
-				B0F4D03821DAA123004E9692 /* Controller */,
+				B09C3F2721DD41720093C10F /* Interactor */,
+				B0F4D03821DAA123004E9692 /* Presenter */,
+				B09C3F2821DD41830093C10F /* Entity */,
 				B0F4D03721DAA108004E9692 /* Router */,
+				B09C3F2521DD41360093C10F /* API&Network */,
+				B09C3F2121DD40060093C10F /* CommonClasses */,
 				B072E60B21BCEBE600752CF0 /* Assets.xcassets */,
 				B072E60D21BCEBE600752CF0 /* LaunchScreen.storyboard */,
 				B072E61021BCEBE600752CF0 /* Info.plist */,
 				B072E61121BCEBE600752CF0 /* main.m */,
+				B09C3F1E21DD3D1C0093C10F /* LearnObjC-Bridging-Header.h */,
 			);
 			path = LearnObjC;
 			sourceTree = "<group>";
@@ -175,6 +203,53 @@
 			path = LearnObjCUITests;
 			sourceTree = "<group>";
 		};
+		B09C3F2121DD40060093C10F /* CommonClasses */ = {
+			isa = PBXGroup;
+			children = (
+				B09C3F2221DD40210093C10F /* Extensions */,
+				B09C3F2D21DD43C60093C10F /* App.swift */,
+				B09C3F2F21DD47940093C10F /* AlertcontrollerManager.swift */,
+				B09C3F3121DD492C0093C10F /* ActivityIndicatorManager.swift */,
+				B09C3F3921DDF3C60093C10F /* JSONManager.swift */,
+				B09C3F3B21DDF4DD0093C10F /* Operators.swift */,
+			);
+			path = CommonClasses;
+			sourceTree = "<group>";
+		};
+		B09C3F2221DD40210093C10F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B09C3F1F21DD3D1D0093C10F /* UIViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B09C3F2521DD41360093C10F /* API&Network */ = {
+			isa = PBXGroup;
+			children = (
+				B09C3F2321DD403A0093C10F /* APIManager.swift */,
+				B09C3F2B21DD43500093C10F /* WebService.swift */,
+			);
+			path = "API&Network";
+			sourceTree = "<group>";
+		};
+		B09C3F2721DD41720093C10F /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B09C3F2821DD41830093C10F /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B09C3F2921DD419E0093C10F /* BaseResponse.swift */,
+				B09C3F3521DDDC0C0093C10F /* CabResponse.swift */,
+				B09C3F3721DDE5CE0093C10F /* SocioProTreeResponse.swift */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
 		B0F4D03721DAA108004E9692 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,13 +259,13 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		B0F4D03821DAA123004E9692 /* Controller */ = {
+		B0F4D03821DAA123004E9692 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
 				B072E60521BCEBE500752CF0 /* ViewController.h */,
 				B072E60621BCEBE500752CF0 /* ViewController.m */,
 			);
-			path = Controller;
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		B0F4D03921DAA134004E9692 /* View */ = {
@@ -271,6 +346,7 @@
 				TargetAttributes = {
 					B072E5FE21BCEBE500752CF0 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					B072E61621BCEBE600752CF0 = {
 						CreatedOnToolsVersion = 10.1;
@@ -403,9 +479,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B09C3F2E21DD43C60093C10F /* App.swift in Sources */,
+				B09C3F3A21DDF3C60093C10F /* JSONManager.swift in Sources */,
+				B09C3F3621DDDC0C0093C10F /* CabResponse.swift in Sources */,
+				B09C3F2421DD403A0093C10F /* APIManager.swift in Sources */,
+				B09C3F2021DD3D1D0093C10F /* UIViewExtension.swift in Sources */,
+				B09C3F3221DD492C0093C10F /* ActivityIndicatorManager.swift in Sources */,
+				B09C3F2C21DD43500093C10F /* WebService.swift in Sources */,
 				B072E60721BCEBE500752CF0 /* ViewController.m in Sources */,
 				B0F4D03621DAA102004E9692 /* RouterViewController.m in Sources */,
+				B09C3F3021DD47940093C10F /* AlertcontrollerManager.swift in Sources */,
+				B09C3F2A21DD419E0093C10F /* BaseResponse.swift in Sources */,
+				B09C3F3C21DDF4DD0093C10F /* Operators.swift in Sources */,
 				B072E61221BCEBE600752CF0 /* main.m in Sources */,
+				B09C3F3821DDE5CE0093C10F /* SocioProTreeResponse.swift in Sources */,
 				B072E60421BCEBE500752CF0 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -578,6 +665,7 @@
 			baseConfigurationReference = B38272A85EAEDC61BDD65A56 /* Pods-LearnObjC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = MWN9F3Q439;
@@ -588,6 +676,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.DrB.LearnObjC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LearnObjC/LearnObjC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -597,6 +688,7 @@
 			baseConfigurationReference = C2F347D3893B002C16408DD4 /* Pods-LearnObjC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = MWN9F3Q439;
@@ -607,6 +699,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.DrB.LearnObjC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LearnObjC/LearnObjC-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -615,6 +709,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 50A31099E1CC1C4F8C45A150 /* Pods-LearnObjCTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LearnObjCTests/Info.plist;
@@ -634,6 +729,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 77F2C1AEFFDE24E4C660856E /* Pods-LearnObjCTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LearnObjCTests/Info.plist;
@@ -653,6 +749,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2E292336ABE10FEF62C54599 /* Pods-LearnObjCUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LearnObjCUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -671,6 +768,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D9A8077E8906FE3BCCBB376D /* Pods-LearnObjCUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LearnObjCUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
