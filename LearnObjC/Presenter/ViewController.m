@@ -23,6 +23,7 @@
     APIManager* apiManager = [[APIManager alloc] init];
     [apiManager getSocioProTreeWithParameters:[NSDictionary new] completion:^(SocioProTreeResponse* socioProResponse){
         NSLog(@"%@", socioProResponse);
+        NSLog(@"%@", socioProResponse.cabResponse.mensResponse);
         
     }];
 }

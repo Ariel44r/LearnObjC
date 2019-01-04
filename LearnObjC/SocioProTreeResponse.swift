@@ -10,16 +10,29 @@ import Foundation
 import ObjectMapper
 
 @objc class SocioProTreeResponse: NSObject, Mappable {
-    var cabResponse: CabResponse!
-    var responseSocio: String!
+    @objc var cabResponse: CabResponse
+    @objc var responseSocio: String
     
-    override init() {}
+    override init() {
+        self.cabResponse = CabResponse()
+        self.responseSocio = ""
+        
+    }
 
-    required init?(map: Map) { }
+    required init?(map: Map) {
+        self.cabResponse = CabResponse()
+        self.responseSocio = ""
+        
+    }
     
     func mapping(map: Map) {
         self.cabResponse <- map["cabResponse"]
         self.responseSocio <- map["responseSocio"]
+        
+    }
+    
+    @objc func getResponseSocio() -> String {
+        return self.responseSocio
         
     }
     

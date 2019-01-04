@@ -14,9 +14,8 @@ import ObjectMapper
     
     // MARK: - SocioProTreeResponse
     @objc func getSocioProTree(parameters: [String: Any], completion: @escaping(SocioProTreeResponse) -> Void) {
-        let socioProTreeRequest: WebService = WebService(WS: .socioProTreeResponse, parameters, [:])
         self.endPoint(
-            request: socioProTreeRequest,
+            request: WebService(WS: .socioProTreeResponse, parameters, [:]),
             completion: { (response: SocioProTreeResponse?) in
                 if let socioProTreeResponse = response as SocioProTreeResponse? {
                     debugPrint(socioProTreeResponse.toJSON())
