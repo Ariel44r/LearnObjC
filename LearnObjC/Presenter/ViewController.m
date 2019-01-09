@@ -22,16 +22,14 @@
     
     APIManager* apiManager = [[APIManager alloc] init];
     [apiManager getSocioProTreeWithParameters:[NSDictionary new] completion:^(SocioProTreeResponse* socioProResponse){
-        NSLog(@"%@", socioProResponse);
-        NSLog(@"%@", socioProResponse.cabResponse.mensResponse);
+        NSLog(@"%@", [[[socioProResponse getEmpresas][0] getPaises][0] getnPais]);
         
     }];
 }
 
 #pragma mark - UITableViewProtocols
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 50;
-    
+    return 20;
     
 }
 

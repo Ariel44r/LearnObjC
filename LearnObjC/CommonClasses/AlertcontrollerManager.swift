@@ -8,12 +8,12 @@
 
 import UIKit
 
-public class AlertControllerManager {
+@objc public class AlertControllerManager: NSObject {
     
     public static var alert: UIAlertController!
     public static var alertStyle: UIAlertController.Style!
     
-    class func showAlert(controller: UIViewController?, alertStyle: UIAlertController.Style, title: String?, message: String?, actions: [UIAlertAction]?) {
+    @objc class func showAlert(controller: UIViewController?, alertStyle: UIAlertController.Style, title: String?, message: String?, actions: [UIAlertAction]?) {
         if let _ = self.getTopViewController() as? UIAlertController {
             debugPrint("AlertControllerWillNotPresent")
             
@@ -39,7 +39,7 @@ public class AlertControllerManager {
         }
     }
     
-    class func getTopViewController() -> UIViewController {
+    @objc class func getTopViewController() -> UIViewController {
         var topViewController = UIApplication.shared.delegate!.window!!.rootViewController!
         while (topViewController.presentedViewController != nil) {
             if(topViewController.isKind(of: UINavigationController.classForCoder())){

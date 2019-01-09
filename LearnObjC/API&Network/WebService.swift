@@ -43,9 +43,7 @@ enum WS {
             self.requestURL = self.baseURL + "/JWT_ConsultaEstructura"
             self.method = .post
             self.encoding = JSONEncoding.default
-            
-        default:
-            break
+
         }
     }
     

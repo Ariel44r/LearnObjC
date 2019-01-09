@@ -58,11 +58,11 @@ import ObjectMapper
                 ActivityIndicatorManager.instance.progressViewWill(appear: false)
                 switch response.result {
                 case .success:
-                    debugPrint("✔️ -> [\(request.name)]")
+                    debugPrint("✔️ -> [\(request.name!)]")
                     completion(response.value!)
                     
                 case .failure(let error):
-                    debugPrint("❌ -> [\(request.name)] -> ", error)
+                    debugPrint("❌ -> [\(request.name!)] -> ", error)
                     if error.localizedDescription.contains("The request timed out") {
                         AlertControllerManager.showAlert(controller: nil, alertStyle: .alert, title: "Localizable.Common.TROUBLE_CONNECTION", message: "Localizable.Common.FAILURE_SERVER_CONNECTION", actions: nil)
                         

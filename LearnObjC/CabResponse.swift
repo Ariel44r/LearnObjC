@@ -10,20 +10,12 @@ import Foundation
 import ObjectMapper
 
 @objc class CabResponse: NSObject, Mappable {
-    @objc var codResponse: Int
-    @objc var mensResponse: String
+    @objc var codResponse: Int = 0
+    @objc var mensResponse: String! = nil
     
-    override init(){
-        self.codResponse = 0
-        self.mensResponse = ""
-        
-    }
+    override init() { }
     
-    required init?(map: Map) {
-        self.codResponse = 0
-        self.mensResponse = ""
-        
-    }
+    required init?(map: Map) { }
     
     func mapping(map: Map) {
         self.codResponse <- map["codResponse"]

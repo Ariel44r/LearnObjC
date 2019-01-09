@@ -10,30 +10,23 @@ import Foundation
 import ObjectMapper
 
 @objc class SocioProTreeResponse: NSObject, Mappable {
-    @objc var cabResponse: CabResponse
-    @objc var responseSocio: String
+    @objc private var cabResponse: CabResponse = CabResponse()
+    @objc private var responseSocio: String! = nil
+    @objc private var empresas: [Empresa] = []
     
-    override init() {
-        self.cabResponse = CabResponse()
-        self.responseSocio = ""
-        
-    }
-
-    required init?(map: Map) {
-        self.cabResponse = CabResponse()
-        self.responseSocio = ""
-        
-    }
-    
+    override init() { }
+    required init?(map: Map) { }
     func mapping(map: Map) {
         self.cabResponse <- map["cabResponse"]
         self.responseSocio <- map["responseSocio"]
-        
+        if let data: Data = self.responseSocio.data(using: .utf8),
+        let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers),
+        let empresas: [Empresa] = Mapper<Empresa>().mapArray(JSONObject: json) {
+            self.empresas = empresas
+            
+        }
     }
     
-    @objc func getResponseSocio() -> String {
-        return self.responseSocio
-        
-    }
+    @objc func getEmpresas() -> [Empresa] { return self.empresas }
     
 }

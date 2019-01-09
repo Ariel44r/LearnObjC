@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B004C26821E5382B000AE08C /* Pais.swift in Sources */ = {isa = PBXBuildFile; fileRef = B004C26721E5382B000AE08C /* Pais.swift */; };
+		B004C26A21E54A7D000AE08C /* UnidadNegocio.swift in Sources */ = {isa = PBXBuildFile; fileRef = B004C26921E54A7D000AE08C /* UnidadNegocio.swift */; };
 		B072E60421BCEBE500752CF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B072E60321BCEBE500752CF0 /* AppDelegate.m */; };
 		B072E60721BCEBE500752CF0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B072E60621BCEBE500752CF0 /* ViewController.m */; };
 		B072E60A21BCEBE500752CF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B072E60821BCEBE500752CF0 /* Main.storyboard */; };
@@ -26,6 +28,7 @@
 		B09C3F3821DDE5CE0093C10F /* SocioProTreeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09C3F3721DDE5CE0093C10F /* SocioProTreeResponse.swift */; };
 		B09C3F3A21DDF3C60093C10F /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09C3F3921DDF3C60093C10F /* JSONManager.swift */; };
 		B09C3F3C21DDF4DD0093C10F /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09C3F3B21DDF4DD0093C10F /* Operators.swift */; };
+		B0AB3D6221DF30C2003DD464 /* Empresa.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AB3D6121DF30C2003DD464 /* Empresa.swift */; };
 		B0F4D03621DAA102004E9692 /* RouterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F4D03521DAA102004E9692 /* RouterViewController.m */; };
 		B4C706A54B7C9EC9ADB6A79B /* libPods-LearnObjCUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2656BAEF50E989C1C9A642A /* libPods-LearnObjCUITests.a */; };
 		C68E5F382017F13EFA0EFB7B /* libPods-LearnObjCTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6883641FCB543BB5E2317425 /* libPods-LearnObjCTests.a */; };
@@ -55,6 +58,8 @@
 		6883641FCB543BB5E2317425 /* libPods-LearnObjCTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LearnObjCTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F2C1AEFFDE24E4C660856E /* Pods-LearnObjCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnObjCTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnObjCTests/Pods-LearnObjCTests.release.xcconfig"; sourceTree = "<group>"; };
 		AE2A5B98380D393EEACA8E8E /* libPods-LearnObjC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LearnObjC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B004C26721E5382B000AE08C /* Pais.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pais.swift; sourceTree = "<group>"; };
+		B004C26921E54A7D000AE08C /* UnidadNegocio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnidadNegocio.swift; sourceTree = "<group>"; };
 		B072E5FF21BCEBE500752CF0 /* LearnObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B072E60221BCEBE500752CF0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B072E60321BCEBE500752CF0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -83,6 +88,7 @@
 		B09C3F3721DDE5CE0093C10F /* SocioProTreeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocioProTreeResponse.swift; sourceTree = "<group>"; };
 		B09C3F3921DDF3C60093C10F /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
 		B09C3F3B21DDF4DD0093C10F /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		B0AB3D6121DF30C2003DD464 /* Empresa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Empresa.swift; sourceTree = "<group>"; };
 		B0F4D03421DAA102004E9692 /* RouterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RouterViewController.h; sourceTree = "<group>"; };
 		B0F4D03521DAA102004E9692 /* RouterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RouterViewController.m; sourceTree = "<group>"; };
 		B2656BAEF50E989C1C9A642A /* libPods-LearnObjCUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LearnObjCUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -246,6 +252,9 @@
 				B09C3F2921DD419E0093C10F /* BaseResponse.swift */,
 				B09C3F3521DDDC0C0093C10F /* CabResponse.swift */,
 				B09C3F3721DDE5CE0093C10F /* SocioProTreeResponse.swift */,
+				B0AB3D6121DF30C2003DD464 /* Empresa.swift */,
+				B004C26721E5382B000AE08C /* Pais.swift */,
+				B004C26921E54A7D000AE08C /* UnidadNegocio.swift */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -484,6 +493,8 @@
 				B09C3F3621DDDC0C0093C10F /* CabResponse.swift in Sources */,
 				B09C3F2421DD403A0093C10F /* APIManager.swift in Sources */,
 				B09C3F2021DD3D1D0093C10F /* UIViewExtension.swift in Sources */,
+				B004C26A21E54A7D000AE08C /* UnidadNegocio.swift in Sources */,
+				B0AB3D6221DF30C2003DD464 /* Empresa.swift in Sources */,
 				B09C3F3221DD492C0093C10F /* ActivityIndicatorManager.swift in Sources */,
 				B09C3F2C21DD43500093C10F /* WebService.swift in Sources */,
 				B072E60721BCEBE500752CF0 /* ViewController.m in Sources */,
@@ -494,6 +505,7 @@
 				B072E61221BCEBE600752CF0 /* main.m in Sources */,
 				B09C3F3821DDE5CE0093C10F /* SocioProTreeResponse.swift in Sources */,
 				B072E60421BCEBE500752CF0 /* AppDelegate.m in Sources */,
+				B004C26821E5382B000AE08C /* Pais.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
