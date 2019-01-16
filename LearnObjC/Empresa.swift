@@ -8,20 +8,20 @@
 
 import ObjectMapper
 
-@objc class Empresa: NSObject, Mappable {
+@objc class Empresa: BaseMap {
     @objc private var id: String! = nil
     @objc private var idEmpresa: Int = 0
     @objc private var nEmpresa: String! = nil
     @objc private var error: String? = nil
     @objc private var paises: [Pais] = []
     
-    required init?(map: Map) { }
-    func mapping(map: Map) {
+    required init() { }
+    override func map(map: JSON) {
         self.id <- map["$id"]
         self.idEmpresa <- map["Id_Empresa"]
         self.nEmpresa <- map["NEmpresa"]
         self.error <- map["Error"]
-        self.paises <- map["pais"]
+        self.paises <> map["pais"]
         
     }
     

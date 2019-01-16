@@ -9,15 +9,12 @@
 import Foundation
 import ObjectMapper
 
-@objc class CabResponse: NSObject, Mappable {
+@objc class CabResponse: BaseMap {
     @objc var codResponse: Int = 0
     @objc var mensResponse: String! = nil
     
-    override init() { }
-    
-    required init?(map: Map) { }
-    
-    func mapping(map: Map) {
+    required init() { }
+    override func map(map: JSON) {
         self.codResponse <- map["codResponse"]
         self.mensResponse <- map["mensResponse"]
         

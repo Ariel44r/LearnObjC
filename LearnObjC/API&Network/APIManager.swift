@@ -14,32 +14,14 @@ import ObjectMapper
     
     // MARK: - SocioProTreeResponse
     @objc func getSocioProTree(parameters: [String: Any], completion: @escaping(SocioProTreeResponse) -> Void) {
-        self.endPoint(
-            request: WebService(WS: .socioProTreeResponse, parameters, [:]),
+        self.request(
+            WS: WebService(WS: .socioProTreeResponse, parameters, [:]),
             completion: { (response: SocioProTreeResponse?) in
                 if let socioProTreeResponse = response as SocioProTreeResponse? {
-                    debugPrint(socioProTreeResponse.toJSON())
                     completion(socioProTreeResponse)
                     
                 }
             }
-        )
-    }
-    
-    // MARK: Login
-    @objc func loginWS(parameters: [String: Any], completion: @escaping(BaseResponse?) -> Void) {
-        self.endPoint(
-            request: WebService(WS: .login, parameters, [:]),
-            completion: { response in completion(response) }
-            
-        )
-    }
-    
-    @objc func signUpWS(parameters: [String: Any], completion: @escaping(BaseResponse?) -> Void) {
-        self.endPoint(
-            request: WebService(WS: .signUp, parameters, [:]),
-            completion: { response in completion(response) }
-            
         )
     }
     
@@ -75,6 +57,32 @@ import ObjectMapper
             AlertControllerManager.showAlert(controller: nil, alertStyle: .alert, title: "Localizable.Common.TROUBLE_CONNECTION", message: "Localizable.Common.FAILURE_SERVER_CONNECTION", actions: nil)
             completion(nil)
             
+        }
+    }
+    
+    func request<T: BaseMap>(WS: WebService, completion: @escaping(T?) -> Void) {
+        let date: Date = Date()
+        var request : URLRequest = URLRequest(url: URL(string: WS.requestURL)!)
+        request.httpMethod = "post"
+        request.httpBody = try? JSONSerialization.data(withJSONObject: WS.parameters, options: [])
+        DispatchQueue.global(qos: .background).async {
+            let dataTask = URLSession.shared.dataTask(with: request) { data, response, error in
+                if let data = data as Data?,
+                let JSON = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? JSON {
+                    let time: TimeInterval = Date().timeIntervalSince(date)
+                    debugPrint("THE REQUEST DURING: [\(time)] SECONDS")
+                    DispatchQueue.main.async {
+                        let object = T.init()
+                        object.map(map: JSON!)
+                        debugPrint(object)
+                        if let responseSocio = object as? SocioProTreeResponse {
+                            debugPrint(responseSocio.empresas[0].getnEmpresa())
+                            
+                        }
+                    }
+                }
+            }
+            dataTask.resume()
         }
     }
     

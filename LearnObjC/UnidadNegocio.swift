@@ -8,20 +8,27 @@
 
 import ObjectMapper
 
-@objc class UnidadNegocio: NSObject, Mappable {
+@objc class UnidadNegocio: BaseMap {
     @objc private var id: String!
     @objc private var idUnidadNegocio: Int = 0
     @objc private var nUnidadNegocio: String!
     @objc private var icono: String!
-    @objc private var macroProceso: [Any] = []
+    @objc private var macroProceso: [MacroProceso] = []
     
-    required init?(map: Map) { }
-    func mapping(map: Map) {
+    required init() { }
+    override func map(map: JSON) {
         self.id <- map["$id"]
         self.idUnidadNegocio <- map["Id_UnidadNegocio"]
         self.nUnidadNegocio <- map["NUnidadNegocio"]
         self.icono <- map["IconoUN"]
-        self.macroProceso <- map["MacroProceso"]
+        self.macroProceso <> map["MacroProceso"]
         
     }
+    
+    @objc func getID() -> String { return self.id }
+    @objc func getIDUnidadNegocio() -> Int { return self.idUnidadNegocio }
+    @objc func getnUnidadNegocio() -> String { return self.nUnidadNegocio }
+    @objc func getIcono() -> String { return self.icono }
+    @objc func getMacroProcesos() -> [MacroProceso] { return self.macroProceso }
+    
 }

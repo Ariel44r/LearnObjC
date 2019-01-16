@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B004C26821E5382B000AE08C /* Pais.swift in Sources */ = {isa = PBXBuildFile; fileRef = B004C26721E5382B000AE08C /* Pais.swift */; };
 		B004C26A21E54A7D000AE08C /* UnidadNegocio.swift in Sources */ = {isa = PBXBuildFile; fileRef = B004C26921E54A7D000AE08C /* UnidadNegocio.swift */; };
+		B004C26C21E5764A000AE08C /* MacroProceso.swift in Sources */ = {isa = PBXBuildFile; fileRef = B004C26B21E5764A000AE08C /* MacroProceso.swift */; };
 		B072E60421BCEBE500752CF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B072E60321BCEBE500752CF0 /* AppDelegate.m */; };
 		B072E60721BCEBE500752CF0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B072E60621BCEBE500752CF0 /* ViewController.m */; };
 		B072E60A21BCEBE500752CF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B072E60821BCEBE500752CF0 /* Main.storyboard */; };
@@ -60,6 +61,7 @@
 		AE2A5B98380D393EEACA8E8E /* libPods-LearnObjC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LearnObjC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B004C26721E5382B000AE08C /* Pais.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pais.swift; sourceTree = "<group>"; };
 		B004C26921E54A7D000AE08C /* UnidadNegocio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnidadNegocio.swift; sourceTree = "<group>"; };
+		B004C26B21E5764A000AE08C /* MacroProceso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroProceso.swift; sourceTree = "<group>"; };
 		B072E5FF21BCEBE500752CF0 /* LearnObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B072E60221BCEBE500752CF0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B072E60321BCEBE500752CF0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 				B0AB3D6121DF30C2003DD464 /* Empresa.swift */,
 				B004C26721E5382B000AE08C /* Pais.swift */,
 				B004C26921E54A7D000AE08C /* UnidadNegocio.swift */,
+				B004C26B21E5764A000AE08C /* MacroProceso.swift */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				B072E60721BCEBE500752CF0 /* ViewController.m in Sources */,
 				B0F4D03621DAA102004E9692 /* RouterViewController.m in Sources */,
 				B09C3F3021DD47940093C10F /* AlertcontrollerManager.swift in Sources */,
+				B004C26C21E5764A000AE08C /* MacroProceso.swift in Sources */,
 				B09C3F2A21DD419E0093C10F /* BaseResponse.swift in Sources */,
 				B09C3F3C21DDF4DD0093C10F /* Operators.swift in Sources */,
 				B072E61221BCEBE600752CF0 /* main.m in Sources */,

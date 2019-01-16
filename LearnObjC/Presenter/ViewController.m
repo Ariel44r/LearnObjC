@@ -19,12 +19,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.title = @"title";
+    UIRefreshControl* refreshControl = [[UIRefreshControl alloc] init];
+    [self.tableView addSubview:refreshControl];
+    [refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
     
+    [self refresh:refreshControl];
+}
+
+- (void)refresh:(UIRefreshControl*)refresh{
+    [refresh endRefreshing];
     APIManager* apiManager = [[APIManager alloc] init];
-    [apiManager getSocioProTreeWithParameters:[NSDictionary new] completion:^(SocioProTreeResponse* socioProResponse){
-        NSLog(@"%@", [[[socioProResponse getEmpresas][0] getPaises][0] getnPais]);
-        
-    }];
+    [apiManager getSocioProTreeWithParameters:[NSDictionary new] completion:^(SocioProTreeResponse* socioProResponse) {} ];
 }
 
 #pragma mark - UITableViewProtocols

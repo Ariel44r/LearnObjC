@@ -6,19 +6,12 @@
 //  Copyright © 2019 ARIEL DIAZ. All rights reserved.
 //
 
-import ObjectMapper
+import Foundation
 
-@objc class BaseResponse: NSObject, Mappable {
-    var responseCode: Int!
-    var message: String?
+@objc class BaseResponse: NSObject {
+    @objc var responseCode: Int = -1
+    @objc var message: String?
     
-    override init(){ }
+    override init() { }
     
-    required init?(map: Map) { }
-    
-    func mapping(map: Map) {
-        self.responseCode <- map["responseCode"]
-        self.message <- map["message"]
-        
-    }
 }
