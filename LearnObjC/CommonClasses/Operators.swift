@@ -120,16 +120,3 @@ class BaseMap: NSObject, MapDelegate {
     }
     
 }
-
-@objc class SocioProTreeResponse: BaseMap {
-    @objc var cabResponse: CabResponse = CabResponse()
-    @objc var empresas: [Empresa] = []
-    
-    required init() { }
-    override func map(map: JSON) {
-        self.cabResponse <- map["cabResponse"]
-        self.empresas <> map["responseSocio"]
-        
-    }
-    
-}
