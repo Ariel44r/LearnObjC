@@ -29,7 +29,10 @@
 - (void)refresh:(UIRefreshControl*)refresh{
     [refresh endRefreshing];
     APIManager* apiManager = [[APIManager alloc] init];
-    [apiManager getSocioProTreeWithParameters:[NSDictionary new] completion:^(SocioProTreeResponse* socioProResponse) {} ];
+    [apiManager getSocioProTreeWithParameters:[NSDictionary new] completion:^(SocioProTreeResponse* socioProResponse){
+        NSLog(@"%@", socioProResponse);
+        
+    }];
 }
 
 #pragma mark - UITableViewProtocols

@@ -5,6 +5,7 @@
 //  Created by ARIEL DIAZ on 1/3/19.
 //  Copyright © 2019 ARIEL DIAZ. All rights reserved.
 //
+//  let obj = type(of: objectArray).Element.self.init()
 
 import Foundation
 
@@ -44,31 +45,7 @@ func <- <T>(object: inout T, map: Any?) {
         let objectMappable: BaseMap = object as? BaseMap {
         objectMappable.map(map: dict)
         
-    } //else if let mapArray = map as? [Any],
-//        var objectArray: [BaseMap] = object as? [BaseMap] {
-//        mapArray.forEach({
-//            if let mapDict: JSON = $0 as? JSON {
-//                let obj = type(of: objectArray).Element.self.init()
-//                obj.map(map: mapDict)
-//                objectArray.append(obj)
-//
-//            }
-//        })
-//    } else if let mapString: String = map as? String,
-//        let data: Data = mapString.data(using: .utf8),
-//        let json = try? JSONSerialization.jsonObject(with: data, options: .mutableLeaves),
-//        let array: [Any] = json as? [Any] {
-//        if var objectArray: [BaseMap] = object as? [BaseMap] {
-//            array.forEach({
-//                if let mapDict: JSON = $0 as? JSON {
-//                    let obj = type(of: objectArray).Element.self.init()
-//                    obj.map(map: mapDict)
-//                    objectArray.append(obj)
-//
-//                }
-//            })
-//        }
-//    }
+    }
 }
 
 // MARK: MapArrayOperator
@@ -85,7 +62,6 @@ func <> <T: BaseMap>(object: inout [T], map: Any?) {
     if let mapArray = map as? [Any] {
         mapArray.forEach({
             if let mapDict: JSON = $0 as? JSON {
-//                let obj = type(of: objectArray).Element.self.init()
                 let obj = T.init()
                 obj.map(map: mapDict)
                 object.append(obj)

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import ObjectMapper
 
 @objc class CabResponse: BaseMap {
     @objc var codResponse: Int = 0

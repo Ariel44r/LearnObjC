@@ -6,7 +6,7 @@
 //  Copyright © 2019 ARIEL DIAZ. All rights reserved.
 //
 
-import ObjectMapper
+import Foundation
 
 @objc class Pais: BaseMap {
     @objc private var id: String!
