@@ -10,7 +10,7 @@ import Foundation
 
 @objc class UnidadNegocio: BaseMap {
     @objc private var id: String!
-    @objc private var idUnidadNegocio: Int = 0
+    @objc private var idUnidadNegocio: Int = -1
     @objc private var nUnidadNegocio: String!
     @objc private var icono: String!
     @objc private var macroProceso: [MacroProceso] = []

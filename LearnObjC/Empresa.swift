@@ -10,7 +10,7 @@ import Foundation
 
 @objc class Empresa: BaseMap {
     @objc private var id: String! = nil
-    @objc private var idEmpresa: Int = 0
+    @objc private var idEmpresa: Int = -1
     @objc private var nEmpresa: String! = nil
     @objc private var error: String? = nil
     @objc private var paises: [Pais] = []

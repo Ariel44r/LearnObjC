@@ -37,7 +37,6 @@ precedencegroup MapOperator {
 }
 
 func <- <T>(object: inout T, map: Any?) {
-    debugPrint("CLASSNAME: \(T.self)")
     if let raw = map as? T {
         object = raw
         
@@ -58,7 +57,6 @@ precedencegroup MapArrayOperator {
 }
 
 func <> <T: BaseMap>(object: inout [T], map: Any?) {
-    debugPrint("CLASSNAME: [\(T.self)]")
     if let mapArray = map as? [Any] {
         mapArray.forEach({
             if let mapDict: JSON = $0 as? JSON {

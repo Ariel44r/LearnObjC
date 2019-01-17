@@ -10,7 +10,7 @@ import Foundation
 
 @objc class MacroProceso: BaseMap {
     @objc private var id: String!
-    @objc private var idMacroProceso: Int = 0
+    @objc private var idMacroProceso: Int = -1
     @objc private var nMacroProceso: String!
     @objc private var iconoMP: String!
     @objc private var procesos: [Proceso] = []

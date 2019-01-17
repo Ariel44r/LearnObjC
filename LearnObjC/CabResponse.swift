@@ -9,7 +9,7 @@
 import Foundation
 
 @objc class CabResponse: BaseMap {
-    @objc var codResponse: Int = 0
+    @objc var codResponse: Int = -1
     @objc var mensResponse: String! = nil
     
     required init() { }

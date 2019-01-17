@@ -22,15 +22,15 @@
     UIRefreshControl* refreshControl = [[UIRefreshControl alloc] init];
     [self.tableView addSubview:refreshControl];
     [refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
-    
     [self refresh:refreshControl];
+    
 }
 
 - (void)refresh:(UIRefreshControl*)refresh{
     [refresh endRefreshing];
-    APIManager* apiManager = [[APIManager alloc] init];
-    [apiManager getSocioProTreeWithParameters:[NSDictionary new] completion:^(SocioProTreeResponse* socioProResponse){
-        NSLog(@"%@", socioProResponse);
+    WebService* ws = [[WebService alloc] initWithEndPoint:@"https://sproapi-staging.vapor.cloud/JWT_ConsultaEstructura" method:HTTPMethodPOST :[NSDictionary new] :[NSDictionary new] :nil];
+    [[[API alloc] init] post2APIWithWS:ws completion:^(NSObject *socioProResponse){
+        NSLog(@"%f", (float)[[((SocioProTreeResponse*) socioProResponse).empresas[0] getPaises][0] getUnidadesNegocio].count);
         
     }];
 }

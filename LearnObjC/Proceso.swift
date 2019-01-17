@@ -10,7 +10,7 @@ import Foundation
 
 @objc class Proceso: BaseMap {
     private var id: String!
-    private var idProceso: Int = -1
+    private var idProceso: Int! = nil
     private var nProceso: String!
     private var iconoProceso: String!
     
