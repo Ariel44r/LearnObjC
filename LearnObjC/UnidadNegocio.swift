@@ -15,6 +15,25 @@ import Foundation
     @objc private var icono: String!
     @objc private var macroProceso: [MacroProceso] = []
     
+    enum Keys: String, CodingKey {
+        case id = "$id"
+        case idUnidadNegocio = "Id_UnidadNegocio"
+        case nUnidadNegocio = "NUnidadNegocio"
+        case icono = "IconoUN"
+        case macroProceso = "MacroProceso"
+        
+    }
+    
+    override func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: Keys.self)
+        try container.encode(id, forKey: .id)
+        try container.encode(idUnidadNegocio, forKey: .idUnidadNegocio)
+        try container.encode(nUnidadNegocio, forKey: .nUnidadNegocio)
+        try container.encode(icono, forKey: .icono)
+        try container.encode(macroProceso, forKey: .macroProceso)
+        
+    }
+    
     required init() { }
     override func map(map: JSON) {
         self.id <- map["$id"]

@@ -8,8 +8,6 @@
 
 import Foundation
 
-@objc enum WS: NSInteger { case login, signUp, socioProTreeResponse }
-
 @objc enum HTTPMethod: NSInteger { case GET, POST, PUT, PATCH, DELETE }
 
 enum HTTPMethodName: String {
@@ -26,7 +24,6 @@ typealias HTTPBody = [String: Any]
 
 @objc class WebService: NSObject {
     var baseURL: String! = App.MetaData.baseURL
-    var WS: WS!
     var url: String!
     var urlRequest: URLRequest!
     var method: HTTPMethodName!
@@ -34,7 +31,7 @@ typealias HTTPBody = [String: Any]
     var headers: HTTPHeaders!
     var name: String!
     
-    @objc init(endPoint: String, method: HTTPMethod, _ parameters: [String: Any]?, _ headers: HTTPHeaders?, _ name: String?) {
+    @objc init(endPoint: String, method: HTTPMethod, parameters: [String: Any]?, headers: HTTPHeaders?, name: String?) {
         self.parameters = parameters ?? [:]
         self.headers = headers ?? [:]
         self.url = endPoint
@@ -53,7 +50,5 @@ typealias HTTPBody = [String: Any]
         self.name = name ?? "withOutName"
         
     }
-    
-    func getName() -> String { return self.name }
     
 }

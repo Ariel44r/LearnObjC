@@ -28,16 +28,16 @@
 
 - (void)refresh:(UIRefreshControl*)refresh{
     [refresh endRefreshing];
-    WebService* ws = [[WebService alloc] initWithEndPoint:@"https://sproapi-staging.vapor.cloud/JWT_ConsultaEstructura" method:HTTPMethodPOST :[NSDictionary new] :[NSDictionary new] :nil];
-    [[[API alloc] init] post2APIWithWS:ws completion:^(NSObject *socioProResponse){
-        NSLog(@"%f", (float)[[((SocioProTreeResponse*) socioProResponse).empresas[0] getPaises][0] getUnidadesNegocio].count);
+    WebService* ws = [[WebService alloc] initWithEndPoint:@"https://sproapi-staging.vapor.cloud/JWT_ConsultaEstructura" method:HTTPMethodPOST parameters:[NSDictionary new] headers:[NSDictionary new] name:nil];
+    [[APIController new] post2APIWithWS:ws completion:^(SocioProTreeResponse *socioProResponse){
+        NSLog(@"%@", socioProResponse.cabResponse.mensResponse);
         
     }];
 }
 
 #pragma mark - UITableViewProtocols
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 20;
+    return 50;
     
 }
 

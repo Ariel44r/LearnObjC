@@ -15,13 +15,32 @@ import Foundation
     @objc private var error: String? = nil
     @objc private var paises: [Pais] = []
     
+    enum Keys: String, CodingKey {
+        case id = "$id"
+        case idEmpresa = "Id_Empresa"
+        case nEmpresa = "NEmpresa"
+        case error = "Error"
+        case paises = "pais"
+        
+    }
+    
+    override func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: Keys.self)
+        try container.encode(id, forKey: .id)
+        try container.encode(idEmpresa, forKey: .idEmpresa)
+        try container.encode(nEmpresa, forKey: .nEmpresa)
+        try container.encode(error, forKey: .error)
+        try container.encode(paises, forKey: .paises)
+        
+    }
+    
     required init() { }
     override func map(map: JSON) {
-        self.id <- map["$id"]
-        self.idEmpresa <- map["Id_Empresa"]
-        self.nEmpresa <- map["NEmpresa"]
-        self.error <- map["Error"]
-        self.paises <> map["pais"]
+        self.id <- map[Keys.id.rawValue]
+        self.idEmpresa <- map[Keys.idEmpresa.rawValue]
+        self.nEmpresa <- map[Keys.nEmpresa.rawValue]
+        self.error <- map[Keys.nEmpresa.rawValue]
+        self.paises <> map[Keys.paises.rawValue]
         
     }
     

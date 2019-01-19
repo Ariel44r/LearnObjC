@@ -10,13 +10,6 @@ import Foundation
 
 @objc class API: NSObject {
     
-    @objc func post2API(WS: WebService, completion: @escaping(Any?) -> Void) {
-        self.request(WS: WS, completion: { (response: SocioProTreeResponse?) in
-            completion(response)
-            
-        })
-    }
-    
     func request<T: BaseMap>(WS: WebService, completion: @escaping(T?) -> Void) {
         let date: Date = Date()
         ActivityIndicatorManager.instance.progressViewWill(appear: true)
@@ -31,7 +24,7 @@ import Foundation
                         let object = T.init()
                         object.map(map: JSON!)
                         completion(object)
-                        
+
                     }
                 }
             }

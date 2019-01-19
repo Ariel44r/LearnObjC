@@ -15,6 +15,25 @@ import Foundation
     @objc private var iconoMP: String!
     @objc private var procesos: [Proceso] = []
     
+    enum Keys: String, CodingKey {
+        case id = "$id"
+        case idMacroProceso = "Id_Macroproceso"
+        case nMacroProceso = "NMacroProceso"
+        case iconoMP = "IconoMP"
+        case procesos = "Proceso"
+        
+    }
+    
+    override func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: Keys.self)
+        try container.encode(id, forKey: .id)
+        try container.encode(idMacroProceso, forKey: .idMacroProceso)
+        try container.encode(nMacroProceso, forKey: .nMacroProceso)
+        try container.encode(iconoMP, forKey: .iconoMP)
+        try container.encode(procesos, forKey: .procesos)
+        
+    }
+    
     required init() { }
     override func map(map: JSON) {
         self.id <- map["$id"]

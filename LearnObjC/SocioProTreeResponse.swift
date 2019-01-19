@@ -12,10 +12,23 @@ import Foundation
     @objc var cabResponse: CabResponse = CabResponse()
     @objc var empresas: [Empresa] = []
     
+    enum Keys: String, CodingKey {
+        case cabResponse = "cabResponse"
+        case empresas = "responseSocio"
+        
+    }
+    
+    override func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: Keys.self)
+        try container.encode(cabResponse, forKey: .cabResponse)
+        try container.encode(empresas, forKey: .empresas)
+        
+    }
+    
     required init() { }
     override func map(map: JSON) {
-        self.cabResponse <- map["cabResponse"]
-        self.empresas <> map["responseSocio"]
+        self.cabResponse <- map[Keys.cabResponse.rawValue]
+        self.empresas <> map[Keys.empresas.rawValue]
         
     }
     

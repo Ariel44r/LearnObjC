@@ -9,10 +9,6 @@
 
 import Foundation
 
-public typealias JSON = [String: Any]
-public typealias JSONData = Data
-public typealias JSONString = String
-
 // MARK: - ForwardPipe operator
 infix operator |> : ForwardPipeOperator
 
@@ -86,8 +82,9 @@ public protocol MapDelegate {
     
 }
 
-class BaseMap: NSObject, MapDelegate {
+@objc class BaseMap: NSObject, MapDelegate, Encodable {
     required override init() { }
+    func encode(to encoder: Encoder) throws { }
     func map(map: JSON) {
         debugPrint("ONLY MAP SUPER CLASS")
         

@@ -14,12 +14,28 @@ import Foundation
     @objc private var nPais: String!
     @objc private var unidadesNegocio: [UnidadNegocio] = []
     
+    enum Keys: String, CodingKey {
+        case id = "$id"
+        case idPais = "Id_Pais"
+        case nPais = "NPais"
+        case unidadesNegocio = "UnidadNegocio"
+    }
+    
+    override func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: Keys.self)
+        try container.encode(id, forKey: .id)
+        try container.encode(idPais, forKey: .idPais)
+        try container.encode(nPais, forKey: .nPais)
+        try container.encode(unidadesNegocio, forKey: .unidadesNegocio)
+        
+    }
+    
     required init() { }
     override func map(map: JSON) {
-        self.id <- map["$id"]
-        self.idPais <- map["Id_Pais"]
-        self.nPais <- map["NPais"]
-        self.unidadesNegocio <> map["UnidadNegocio"]
+        self.id <- map[Keys.id.rawValue]
+        self.idPais <- map[Keys.idPais.rawValue]
+        self.nPais <- map[Keys.nPais.rawValue]
+        self.unidadesNegocio <> map[Keys.unidadesNegocio.rawValue]
         
     }
     

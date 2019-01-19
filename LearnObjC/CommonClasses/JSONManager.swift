@@ -6,22 +6,39 @@
 //  Copyright © 2019 ARIEL DIAZ. All rights reserved.
 //
 
-import ObjectMapper
+import Foundation
 
-public class JSONManager {
-    public class func getObject<T: Mappable>(jsonData: Data) -> T? {
-        return Mapper<T>().map(JSONObject: jsonData)
+public typealias JSON = [String: Any]
+public typealias JSONData = Data
+public typealias JSONString = String
+
+public class JSONSerializer {
+    public class func object<T: Codable>(with JSONData: JSONData) -> T? {
+        return try? JSONDecoder().decode(T.self, from: JSONData)
         
     }
     
-    public class func getObject<T: Mappable>(jsonString: String) -> T? {
-        return Mapper<T>().map(JSONString: jsonString)
+    public class func object<T: Codable>(with JSONString: JSONString) -> T? {
+        if let jsonData: JSONData = JSONString.data(using: .utf8),
+            let object: T = try? JSONDecoder().decode(T.self, from: jsonData) {
+            return object
+            
+        }
+        return nil
+    }
+    
+    public class func JSONData<T: Codable>(with object: T) -> JSONData? {
+        return try? JSONEncoder().encode(object)
         
     }
     
-    public class func getJsonString<T: Mappable>(object: T) -> String {
-        return object.toJSONString()!
-        
+    public class func JSONString<T: Encodable>(with object: T) -> JSONString? {
+        if let jsonData = try? JSONEncoder().encode(object) {
+            if let jsonString: JSONString = String(data: jsonData, encoding: .utf8) {
+                return jsonString
+                
+            }
+        }
+        return nil
     }
-
 }
