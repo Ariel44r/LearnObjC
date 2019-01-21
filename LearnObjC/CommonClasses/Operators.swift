@@ -76,18 +76,3 @@ func <> <T: BaseMap>(object: inout [T], map: Any?) {
         })
     }
 }
-
-public protocol MapDelegate {
-    func map(map: JSON)
-    
-}
-
-@objc class BaseMap: NSObject, MapDelegate, Encodable {
-    required override init() { }
-    func encode(to encoder: Encoder) throws { }
-    func map(map: JSON) {
-        debugPrint("ONLY MAP SUPER CLASS")
-        
-    }
-    
-}

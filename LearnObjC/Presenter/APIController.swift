@@ -9,14 +9,15 @@
 import Foundation
 
 @objc class APIController: API {
-    @objc func post2API(WS: WebService, completion: @escaping(Any?) -> Void) {
+    @objc func post2API(WS: WebService, completion: @escaping(SocioProTreeResponse?) -> Void) {
         self.request(WS: WS, completion: { (response: SocioProTreeResponse?) in
-            if let encodedData = try? JSONEncoder().encode(response!) {
-                if let json = String(data: encodedData, encoding: .utf8) {
-                    debugPrint("Encoded Json: \(json)")
-                    
-                }
-            }
+            completion(response)
+            
+        })
+    }
+    
+    @objc func post2API2(WS: WebService, completion: @escaping(ListadoResponse?) -> Void) {
+        self.request(WS: WS, completion: { (response: ListadoResponse?) in
             completion(response)
             
         })

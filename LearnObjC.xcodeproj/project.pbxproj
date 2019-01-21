@@ -10,6 +10,8 @@
 		B004C26821E5382B000AE08C /* Pais.swift in Sources */ = {isa = PBXBuildFile; fileRef = B004C26721E5382B000AE08C /* Pais.swift */; };
 		B004C26A21E54A7D000AE08C /* UnidadNegocio.swift in Sources */ = {isa = PBXBuildFile; fileRef = B004C26921E54A7D000AE08C /* UnidadNegocio.swift */; };
 		B004C26C21E5764A000AE08C /* MacroProceso.swift in Sources */ = {isa = PBXBuildFile; fileRef = B004C26B21E5764A000AE08C /* MacroProceso.swift */; };
+		B042A1BB21F62052009EAAF4 /* ListadoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B042A1BA21F62052009EAAF4 /* ListadoResponse.swift */; };
+		B042A1BE21F62144009EAAF4 /* Documento.swift in Sources */ = {isa = PBXBuildFile; fileRef = B042A1BD21F62144009EAAF4 /* Documento.swift */; };
 		B072E60421BCEBE500752CF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B072E60321BCEBE500752CF0 /* AppDelegate.m */; };
 		B072E60721BCEBE500752CF0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B072E60621BCEBE500752CF0 /* ViewController.m */; };
 		B072E60A21BCEBE500752CF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B072E60821BCEBE500752CF0 /* Main.storyboard */; };
@@ -21,7 +23,7 @@
 		B08EC18021F11FEF00C39E57 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08EC17F21F11FEF00C39E57 /* APIController.swift */; };
 		B09C3F2021DD3D1D0093C10F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09C3F1F21DD3D1D0093C10F /* UIViewExtension.swift */; };
 		B09C3F2421DD403A0093C10F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09C3F2321DD403A0093C10F /* API.swift */; };
-		B09C3F2A21DD419E0093C10F /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09C3F2921DD419E0093C10F /* BaseResponse.swift */; };
+		B09C3F2A21DD419E0093C10F /* BaseMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09C3F2921DD419E0093C10F /* BaseMap.swift */; };
 		B09C3F2C21DD43500093C10F /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09C3F2B21DD43500093C10F /* WebService.swift */; };
 		B09C3F2E21DD43C60093C10F /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09C3F2D21DD43C60093C10F /* App.swift */; };
 		B09C3F3021DD47940093C10F /* AlertcontrollerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09C3F2F21DD47940093C10F /* AlertcontrollerManager.swift */; };
@@ -64,6 +66,8 @@
 		B004C26721E5382B000AE08C /* Pais.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pais.swift; sourceTree = "<group>"; };
 		B004C26921E54A7D000AE08C /* UnidadNegocio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnidadNegocio.swift; sourceTree = "<group>"; };
 		B004C26B21E5764A000AE08C /* MacroProceso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroProceso.swift; sourceTree = "<group>"; };
+		B042A1BA21F62052009EAAF4 /* ListadoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListadoResponse.swift; sourceTree = "<group>"; };
+		B042A1BD21F62144009EAAF4 /* Documento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Documento.swift; sourceTree = "<group>"; };
 		B072E5FF21BCEBE500752CF0 /* LearnObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B072E60221BCEBE500752CF0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B072E60321BCEBE500752CF0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -84,7 +88,7 @@
 		B09C3F1E21DD3D1C0093C10F /* LearnObjC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LearnObjC-Bridging-Header.h"; sourceTree = "<group>"; };
 		B09C3F1F21DD3D1D0093C10F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		B09C3F2321DD403A0093C10F /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		B09C3F2921DD419E0093C10F /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		B09C3F2921DD419E0093C10F /* BaseMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMap.swift; sourceTree = "<group>"; };
 		B09C3F2B21DD43500093C10F /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		B09C3F2D21DD43C60093C10F /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		B09C3F2F21DD47940093C10F /* AlertcontrollerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertcontrollerManager.swift; sourceTree = "<group>"; };
@@ -154,6 +158,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B042A1BC21F620D1009EAAF4 /* ListadoResponse */ = {
+			isa = PBXGroup;
+			children = (
+				B042A1BA21F62052009EAAF4 /* ListadoResponse.swift */,
+				B042A1BD21F62144009EAAF4 /* Documento.swift */,
+			);
+			name = ListadoResponse;
+			sourceTree = "<group>";
+		};
 		B072E5F621BCEBE500752CF0 = {
 			isa = PBXGroup;
 			children = (
@@ -219,7 +232,6 @@
 			isa = PBXGroup;
 			children = (
 				B09C3F3721DDE5CE0093C10F /* SocioProTreeResponse.swift */,
-				B09C3F3521DDDC0C0093C10F /* CabResponse.swift */,
 				B0AB3D6121DF30C2003DD464 /* Empresa.swift */,
 				B004C26721E5382B000AE08C /* Pais.swift */,
 				B004C26921E54A7D000AE08C /* UnidadNegocio.swift */,
@@ -269,7 +281,9 @@
 		B09C3F2821DD41830093C10F /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				B09C3F2921DD419E0093C10F /* BaseResponse.swift */,
+				B09C3F2921DD419E0093C10F /* BaseMap.swift */,
+				B09C3F3521DDDC0C0093C10F /* CabResponse.swift */,
+				B042A1BC21F620D1009EAAF4 /* ListadoResponse */,
 				B08EC18121F14B0000C39E57 /* SocioProTreeResponse */,
 			);
 			name = Entity;
@@ -512,6 +526,7 @@
 				B09C3F2021DD3D1D0093C10F /* UIViewExtension.swift in Sources */,
 				B004C26A21E54A7D000AE08C /* UnidadNegocio.swift in Sources */,
 				B0AB3D6221DF30C2003DD464 /* Empresa.swift in Sources */,
+				B042A1BB21F62052009EAAF4 /* ListadoResponse.swift in Sources */,
 				B09C3F3221DD492C0093C10F /* ActivityIndicatorManager.swift in Sources */,
 				B09C3F2C21DD43500093C10F /* WebService.swift in Sources */,
 				B072E60721BCEBE500752CF0 /* ViewController.m in Sources */,
@@ -520,7 +535,8 @@
 				B09C3F3021DD47940093C10F /* AlertcontrollerManager.swift in Sources */,
 				B004C26C21E5764A000AE08C /* MacroProceso.swift in Sources */,
 				B08EC18021F11FEF00C39E57 /* APIController.swift in Sources */,
-				B09C3F2A21DD419E0093C10F /* BaseResponse.swift in Sources */,
+				B042A1BE21F62144009EAAF4 /* Documento.swift in Sources */,
+				B09C3F2A21DD419E0093C10F /* BaseMap.swift in Sources */,
 				B09C3F3C21DDF4DD0093C10F /* Operators.swift in Sources */,
 				B072E61221BCEBE600752CF0 /* main.m in Sources */,
 				B09C3F3821DDE5CE0093C10F /* SocioProTreeResponse.swift in Sources */,

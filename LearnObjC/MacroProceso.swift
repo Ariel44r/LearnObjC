@@ -42,7 +42,6 @@ import Foundation
         self.iconoMP <- map["IconoMP"]
         self.procesos <> map["Proceso"]
         
-        
     }
     
     @objc func getID() -> String { return self.id }

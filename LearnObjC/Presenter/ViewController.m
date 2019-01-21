@@ -28,9 +28,16 @@
 
 - (void)refresh:(UIRefreshControl*)refresh{
     [refresh endRefreshing];
+    
     WebService* ws = [[WebService alloc] initWithEndPoint:@"https://sproapi-staging.vapor.cloud/JWT_ConsultaEstructura" method:HTTPMethodPOST parameters:[NSDictionary new] headers:[NSDictionary new] name:nil];
     [[APIController new] post2APIWithWS:ws completion:^(SocioProTreeResponse *socioProResponse){
-        NSLog(@"%@", socioProResponse.cabResponse.mensResponse);
+        [LOG debugLog:socioProResponse.cabResponse.mensResponse];
+        
+    }];
+    
+    WebService* ws2 = [[WebService alloc] initWithEndPoint:@"https://sproapi-staging.vapor.cloud/JWT_ConsultaListadoProceso" method:HTTPMethodPOST parameters:[NSDictionary new] headers:[NSDictionary new] name:nil];
+    [[APIController new] post2API2WithWS:ws2 completion:^(ListadoResponse *socioProResponse){
+        [LOG debugLog:socioProResponse.cabResponse.mensResponse];
         
     }];
 }
