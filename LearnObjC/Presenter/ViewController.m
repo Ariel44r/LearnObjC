@@ -40,6 +40,12 @@
         [LOG debugLog:socioProResponse.cabResponse.mensResponse];
         
     }];
+    
+    WebService* ws3 = [[WebService alloc] initWithEndPoint:@"https://sproapi-staging.vapor.cloud/JWT_ConsultaDocumento" method:HTTPMethodPOST parameters:[NSDictionary new] headers:[NSDictionary new] name:nil];
+    [[APIController new] getDocumentWithWS:ws3 completion:^(DocumentoResponse *socioProResponse){
+        [LOG debugLog:socioProResponse.cabResponse.mensResponse];
+        
+    }];
 }
 
 #pragma mark - UITableViewProtocols

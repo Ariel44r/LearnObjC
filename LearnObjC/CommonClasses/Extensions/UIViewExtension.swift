@@ -103,3 +103,10 @@ extension UIView {
     }
     
 }
+
+@objc public class LOG: NSObject {
+    @objc class func debugLog(_ object: Any) {
+        debugPrint(object)
+        
+    }
+}

@@ -18,11 +18,11 @@ import Foundation
                 DispatchQueue.main.async {
                     ActivityIndicatorManager.instance.progressViewWill(appear: false)
                     if let data = data as Data?,
-                    let JSON = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? JSON {
-                        let time: TimeInterval = Date().timeIntervalSince(date)
-                        debugPrint("THE REQUEST DURING: [\(time)] SECONDS")
+                    let JSON = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? JSON,
+                    let json: JSON = JSON as JSON? {
+                        debugPrint("THE REQUEST \(WS.name!) DURING: [\(Date().timeIntervalSince(date))] SECONDS")
                         let object = T.init()
-                        object.map(map: JSON!)
+                        object.map(map: json)
                         completion(object)
 
                     }

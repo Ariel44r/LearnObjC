@@ -19,10 +19,3 @@ import Foundation
     func map(map: JSON) { }
     
 }
-
-@objc public class LOG: NSObject {
-    @objc class func debugLog(_ object: Any) {
-        debugPrint(object)
-        
-    }
-}

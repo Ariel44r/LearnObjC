@@ -12,6 +12,7 @@
 		B004C26C21E5764A000AE08C /* MacroProceso.swift in Sources */ = {isa = PBXBuildFile; fileRef = B004C26B21E5764A000AE08C /* MacroProceso.swift */; };
 		B042A1BB21F62052009EAAF4 /* ListadoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B042A1BA21F62052009EAAF4 /* ListadoResponse.swift */; };
 		B042A1BE21F62144009EAAF4 /* Documento.swift in Sources */ = {isa = PBXBuildFile; fileRef = B042A1BD21F62144009EAAF4 /* Documento.swift */; };
+		B042A1C021F64B5C009EAAF4 /* DocumentoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B042A1BF21F64B5C009EAAF4 /* DocumentoResponse.swift */; };
 		B072E60421BCEBE500752CF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B072E60321BCEBE500752CF0 /* AppDelegate.m */; };
 		B072E60721BCEBE500752CF0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B072E60621BCEBE500752CF0 /* ViewController.m */; };
 		B072E60A21BCEBE500752CF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B072E60821BCEBE500752CF0 /* Main.storyboard */; };
@@ -68,6 +69,7 @@
 		B004C26B21E5764A000AE08C /* MacroProceso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroProceso.swift; sourceTree = "<group>"; };
 		B042A1BA21F62052009EAAF4 /* ListadoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListadoResponse.swift; sourceTree = "<group>"; };
 		B042A1BD21F62144009EAAF4 /* Documento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Documento.swift; sourceTree = "<group>"; };
+		B042A1BF21F64B5C009EAAF4 /* DocumentoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentoResponse.swift; sourceTree = "<group>"; };
 		B072E5FF21BCEBE500752CF0 /* LearnObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B072E60221BCEBE500752CF0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B072E60321BCEBE500752CF0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -165,6 +167,14 @@
 				B042A1BD21F62144009EAAF4 /* Documento.swift */,
 			);
 			name = ListadoResponse;
+			sourceTree = "<group>";
+		};
+		B042A1C121F64E3A009EAAF4 /* DocumentoResponse */ = {
+			isa = PBXGroup;
+			children = (
+				B042A1BF21F64B5C009EAAF4 /* DocumentoResponse.swift */,
+			);
+			name = DocumentoResponse;
 			sourceTree = "<group>";
 		};
 		B072E5F621BCEBE500752CF0 = {
@@ -283,8 +293,9 @@
 			children = (
 				B09C3F2921DD419E0093C10F /* BaseMap.swift */,
 				B09C3F3521DDDC0C0093C10F /* CabResponse.swift */,
-				B042A1BC21F620D1009EAAF4 /* ListadoResponse */,
 				B08EC18121F14B0000C39E57 /* SocioProTreeResponse */,
+				B042A1BC21F620D1009EAAF4 /* ListadoResponse */,
+				B042A1C121F64E3A009EAAF4 /* DocumentoResponse */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -542,6 +553,7 @@
 				B09C3F3821DDE5CE0093C10F /* SocioProTreeResponse.swift in Sources */,
 				B072E60421BCEBE500752CF0 /* AppDelegate.m in Sources */,
 				B004C26821E5382B000AE08C /* Pais.swift in Sources */,
+				B042A1C021F64B5C009EAAF4 /* DocumentoResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

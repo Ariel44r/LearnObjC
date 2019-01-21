@@ -9,6 +9,7 @@
 import Foundation
 
 @objc class APIController: API {
+    
     @objc func post2API(WS: WebService, completion: @escaping(SocioProTreeResponse?) -> Void) {
         self.request(WS: WS, completion: { (response: SocioProTreeResponse?) in
             completion(response)
@@ -22,4 +23,12 @@ import Foundation
             
         })
     }
+    
+    @objc func getDocument(WS: WebService, completion: @escaping(DocumentoResponse?) -> Void) {
+        self.request(WS: WS, completion: { (response: DocumentoResponse?) in
+            completion(response)
+            
+        })
+    }
+    
 }
