@@ -32,4 +32,11 @@ import Foundation
         
     }
     
+    func get<T>(_ key: Keys) -> T {
+        switch key {
+        case .cabResponse: return cabResponse as! T
+        case .empresas: return empresas as! T
+        }
+    }
+    
 }

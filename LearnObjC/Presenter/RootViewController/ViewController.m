@@ -23,6 +23,7 @@
     [self.tableView addSubview:refreshControl];
     [refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
     [self refresh:refreshControl];
+    self.navigationItem.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
     
 }
 
