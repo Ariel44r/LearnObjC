@@ -27,12 +27,12 @@ public class JSONSerializer {
         return nil
     }
     
-    public class func JSONData<T: Codable>(with object: T) -> JSONData? {
+    public class func toJSONData<T: Codable>(with object: T) -> JSONData? {
         return try? JSONEncoder().encode(object)
         
     }
     
-    public class func JSONString<T: Encodable>(with object: T) -> JSONString? {
+    public class func toString<T: Encodable>(with object: T) -> JSONString? {
         if let jsonData = try? JSONEncoder().encode(object) {
             if let jsonString: JSONString = String(data: jsonData, encoding: .utf8) {
                 return jsonString

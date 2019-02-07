@@ -8,6 +8,15 @@
 
 import Foundation
 
+@objc class BaseResponse: BaseMap {
+    @objc var cabResponse: CabResponse = CabResponse()
+    
+    override func map(map: JSON) {
+        self.cabResponse <- map["cabResponse"]
+        
+    }
+}
+
 @objc class CabResponse: BaseMap {
     @objc var codResponse: Int = -1
     @objc var mensResponse: String! = nil

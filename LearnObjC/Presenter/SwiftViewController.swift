@@ -22,10 +22,11 @@ class SwiftViewController: SideMenuViewController {
     
     func getSocioProTree() {
         APIController().post2API(WS: WebService(endPoint: "https://sproapi-staging.vapor.cloud/JWT_ConsultaEstructura", method: .POST, parameters: [:], headers: [:], name: "SocioProTree" ), completion: { socioProTreeResponse in
-                let empresas: CabResponse = socioProTreeResponse!.get(.cabResponse)
+            if let jsonstring: String = JSONSerializer.toString(with: socioProTreeResponse) as String? {
+                debugPrint(jsonstring)
                 
             }
-        )
+        })
     }
 
 }
@@ -39,7 +40,7 @@ extension SwiftViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.backgroundColor = indexPath.row%2 == 0 ? .white : .get(.blue)
+        cell.makeViewWith(features: [.color(indexPath.row%2==0 ? .white : .lightGray)])
         cell.selectionStyle = .none
         return cell
         

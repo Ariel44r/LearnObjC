@@ -8,6 +8,7 @@
 //  let obj = type(of: objectArray).Element.self.init()
 
 import Foundation
+import Swift
 
 // MARK: - ForwardPipe operator
 infix operator |> : ForwardPipeOperator

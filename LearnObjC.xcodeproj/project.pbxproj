@@ -39,7 +39,7 @@
 		B0F4D03621DAA102004E9692 /* RouterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F4D03521DAA102004E9692 /* RouterViewController.m */; };
 		B0FF5805220112AB0016C1E6 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FF5804220112AB0016C1E6 /* UIColorExtension.swift */; };
 		B0FF580722011A290016C1E6 /* TabController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FF580622011A290016C1E6 /* TabController.storyboard */; };
-		B0FF580922011DA30016C1E6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FF580822011DA30016C1E6 /* BaseViewController.swift */; };
+		B0FF580922011DA30016C1E6 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FF580822011DA30016C1E6 /* SideMenuViewController.swift */; };
 		B4C706A54B7C9EC9ADB6A79B /* libPods-LearnObjCUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2656BAEF50E989C1C9A642A /* libPods-LearnObjCUITests.a */; };
 		C68E5F382017F13EFA0EFB7B /* libPods-LearnObjCTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6883641FCB543BB5E2317425 /* libPods-LearnObjCTests.a */; };
 		F534F493FAEB0501244AFEB6 /* libPods-LearnObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2A5B98380D393EEACA8E8E /* libPods-LearnObjC.a */; };
@@ -110,7 +110,7 @@
 		B0F4D03521DAA102004E9692 /* RouterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RouterViewController.m; sourceTree = "<group>"; };
 		B0FF5804220112AB0016C1E6 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		B0FF580622011A290016C1E6 /* TabController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabController.storyboard; sourceTree = "<group>"; };
-		B0FF580822011DA30016C1E6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B0FF580822011DA30016C1E6 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		B2656BAEF50E989C1C9A642A /* libPods-LearnObjCUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LearnObjCUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38272A85EAEDC61BDD65A56 /* Pods-LearnObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnObjC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearnObjC/Pods-LearnObjC.debug.xcconfig"; sourceTree = "<group>"; };
 		C2F347D3893B002C16408DD4 /* Pods-LearnObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnObjC.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnObjC/Pods-LearnObjC.release.xcconfig"; sourceTree = "<group>"; };
@@ -333,7 +333,7 @@
 				B0BEE2DD2200C418009A6EBB /* RootViewController */,
 				B0BEE2DE2200C460009A6EBB /* SwiftViewController.swift */,
 				B08EC17F21F11FEF00C39E57 /* APIController.swift */,
-				B0FF580822011DA30016C1E6 /* BaseViewController.swift */,
+				B0FF580822011DA30016C1E6 /* SideMenuViewController.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -556,7 +556,7 @@
 				B09C3F3621DDDC0C0093C10F /* CabResponse.swift in Sources */,
 				B09C3F2421DD403A0093C10F /* API.swift in Sources */,
 				B09C3F2021DD3D1D0093C10F /* UIViewExtension.swift in Sources */,
-				B0FF580922011DA30016C1E6 /* BaseViewController.swift in Sources */,
+				B0FF580922011DA30016C1E6 /* SideMenuViewController.swift in Sources */,
 				B004C26A21E54A7D000AE08C /* UnidadNegocio.swift in Sources */,
 				B0AB3D6221DF30C2003DD464 /* Empresa.swift in Sources */,
 				B042A1BB21F62052009EAAF4 /* ListadoResponse.swift in Sources */,

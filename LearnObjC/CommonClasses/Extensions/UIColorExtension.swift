@@ -15,7 +15,7 @@ extension UIColor {
     class func get(_ color: Color) -> UIColor {
         switch color {
         case .blue:
-            return UIColor(red: 15/255.0, green: 16/255.0, blue: 48/255.0, alpha: 1).withAlphaComponent(0.6)
+            return UIColor(red: 15/255.0, green: 16/255.0, blue: 48/255.0, alpha: 1).withAlphaComponent(1)
         }
         
     }
