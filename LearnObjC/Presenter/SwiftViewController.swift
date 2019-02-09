@@ -34,7 +34,7 @@ class SwiftViewController: SideMenuViewController {
 // MARK: UITableViewDelegate
 extension SwiftViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 32
+        return 64
         
     }
     
@@ -45,4 +45,8 @@ extension SwiftViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
         
     }
+}
+
+extension SwiftViewController {
+    var km: UIView { return UIView() }
 }
