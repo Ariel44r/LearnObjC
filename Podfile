@@ -6,7 +6,6 @@ target 'LearnObjC' do
   # use_frameworks!
 
   # Pods for LearnObjC
-  pod 'AlamofireObjectMapper', '~> 5.0'
 
   target 'LearnObjCTests' do
     inherit! :search_paths
