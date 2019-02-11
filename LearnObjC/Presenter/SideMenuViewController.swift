@@ -9,6 +9,9 @@
 import UIKit
 
 class SideMenuViewController: UIViewController {
+    var appDelegate: AppDelegate!
+    var window: UIWindow!
+    var appFrame: CGRect!
     var sideMenu: UIView!
     var panGesture: UIPanGestureRecognizer!
     var isOpen: Bool = false
@@ -21,19 +24,19 @@ class SideMenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let appFrame: CGRect = appDelegate.window.frame
+        self.appDelegate = UIApplication.shared.delegate as? AppDelegate
+        self.window = self.appDelegate.window
+        self.appFrame = self.window.frame
         self.maxWidth = 300
         self.sideMenu = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: appFrame.height))
         self.sideMenu.makeViewWith(features: [.color(.get(.blue))])
-        appDelegate.window.addSubview(sideMenu)
+        self.appDelegate.window.addSubview(sideMenu)
         self.panGesture = UIPanGestureRecognizer(target: self, action: #selector(self.panGesture(_:)))
-        appDelegate.window.addGestureRecognizer(self.panGesture)
+        self.appDelegate.window.addGestureRecognizer(self.panGesture)
         self.blurView = {
             let view = UIView()
             view.alpha = 0
             view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-            view.frame = CGRect(x: self.maxWidth, y: 0, width: appFrame.width - self.maxWidth, height: appFrame.height)
             return view
         }()
         self.burgerItem = {
@@ -52,9 +55,7 @@ class SideMenuViewController: UIViewController {
     
     // MARK: Targets
     @objc func panGesture(_ sender: UIPanGestureRecognizer) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let appFrame: CGRect = appDelegate.window.frame
-        let window = appDelegate.window
         let offset: CGPoint = sender.translation(in: appDelegate.window)
         switch sender.state {
         case .changed:
@@ -71,7 +72,7 @@ class SideMenuViewController: UIViewController {
             UIView.animate(withDuration: 0.3, animations: {
                 self.sideMenu.frame = CGRect(x: 0, y: 0, width: self.isOpen ? self.maxWidth : 0, height: appFrame.height)
                 self.sideTable.tableView.frame = CGRect(x: 0, y: self.statusBarHeight, width: self.isOpen ? self.maxWidth : 0, height: appFrame.height - self.statusBarHeight)
-                if let layoutContainerView: UIView = window?.rootViewController?.view as UIView? {
+                if let layoutContainerView: UIView = self.window?.rootViewController?.view as UIView? {
                     layoutContainerView.frame = CGRect(x: self.isOpen ? self.maxWidth : 0, y: 0, width: appFrame.width, height: appFrame.height)
                     
                 }
@@ -91,9 +92,14 @@ class SideMenuViewController: UIViewController {
     }
     
     func blurViewWillOnOff(_: Bool) {
-        debugPrint("__[blurViewWill]: \(self.isOpen ? " [On]" : " [Off]")")
-        UIView.animate(withDuration: 0.3, animations: { self.blurView.alpha = self.isOpen ? 1 : 0 })
-        
+        if let layoutContainerView: UIView = window?.rootViewController?.view as UIView? {
+            self.blurView.frame = layoutContainerView.bounds
+            UIView.animate(withDuration: 0.3, animations: {
+                self.blurView.alpha = self.isOpen ? 1 : 0
+                self.isOpen ? layoutContainerView.addSubview(self.blurView) : self.blurView.removeFromSuperview()
+
+            })
+        }
     }
 
 }
