@@ -8,14 +8,23 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
-    var burgerItem: UIBarButtonItem!
-
+class SecondViewController: SideMenuViewController {
+    
+    // MARK: Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.setNavigation(features: [NavigationFeature.burger, NavigationFeature.notifications])
+        self.title = "navigation title"
         
     }
 
+}
+
+extension SecondViewController: NavigationDelegate {
+    func burgerButtonDidTap(_ sender: UIBarButtonItem) {
+        debugPrint("burger button did tap from SecondViewController!")
+        
+    }
 }

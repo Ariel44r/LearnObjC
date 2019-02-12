@@ -15,21 +15,16 @@ class SwiftViewController: SideMenuViewController {
 
         // Do any additional setup after loading the view.
         self.navigationItem.searchController = UISearchController(searchResultsController: nil)
-        self.getSocioProTree()
-        let backView: UIView = {
-            let view = UIView()
-            view.backgroundColor = .yellow
-            return view
-        }()
-        let backItem: UIBarButtonItem = UIBarButtonItem(customView: backView)
-        self.navigationItem.leftBarButtonItem = backItem
-        
+//        self.getSocioProTree()
+        self.setNavigation(features: [NavigationFeature.burger, NavigationFeature.notifications])
+        self.title = "navigation title"
+
     }
     
     func getSocioProTree() {
-        APIController().post2API(WS: WebService(endPoint: "https://sproapi-staging.vapor.cloud/JWT_ConsultaEstructura", method: .POST, parameters: [:], headers: [:], name: "SocioProTree" ), completion: { socioProTreeResponse in
-            if let jsonstring: String = JSONSerializer.toString(with: socioProTreeResponse) as String? {
-                debugPrint(jsonstring)
+        APIController().post2API(WS: WebService(endPoint: "https://sproapi-staging.vapor.cloud/JWT_ConsultaEstructura", method: .POST, parameters: [:], headers: [:], name: "SocioProTree"), completion: { socioProTreeResponse in
+            if let jsonString: String = JSONSerializer.toString(with: socioProTreeResponse) as String? {
+                debugPrint(jsonString)
                 
             }
         })
@@ -53,6 +48,9 @@ extension SwiftViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension SwiftViewController {
-    var km: UIView { return UIView() }
+extension SwiftViewController: NavigationDelegate {
+    func burgerButtonDidTap(_ sender: UIBarButtonItem) {
+        debugPrint("burger button did tap from SwiftViewController!")
+        
+    }
 }

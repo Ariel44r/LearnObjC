@@ -35,16 +35,9 @@ import UIKit
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.showBurgerMenu(_:)))
             view.addGestureRecognizer(tapGesture)
             view.alpha = 0
-            view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+            view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
             return view
         }()
-        self.burgerItem = {
-            let burgerIcon: UIImage = #imageLiteral(resourceName: "ic_burger_menu")
-            let barItem = UIBarButtonItem(image: burgerIcon, style: .done, target: self, action: #selector(self.showBurgerMenu(_:)))
-            barItem.tintColor = .white
-            return barItem
-        }()
-        self.navigationItem.leftBarButtonItem = self.burgerItem
         self.sideMenu = {
             let view = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: appFrame.height))
             view.makeViewWith(features: [.color(.get(.blue))])
@@ -54,7 +47,6 @@ import UIKit
         self.appDelegate.window.addSubview(sideMenu)
         self.sideTable.set()
         self.sideTable.tableView.frame = CGRect(x: 0, y: self.statusBarHeight, width: self.sideMenu.frame.width, height: self.sideMenu.frame.height - self.statusBarHeight)
-        // Do any additional setup after loading the view.
         
     }
     
