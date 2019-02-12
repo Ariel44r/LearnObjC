@@ -15,8 +15,14 @@ class SwiftViewController: SideMenuViewController {
 
         // Do any additional setup after loading the view.
         self.navigationItem.searchController = UISearchController(searchResultsController: nil)
-        self.title = "Title for Navigation"
         self.getSocioProTree()
+        let backView: UIView = {
+            let view = UIView()
+            view.backgroundColor = .yellow
+            return view
+        }()
+        let backItem: UIBarButtonItem = UIBarButtonItem(customView: backView)
+        self.navigationItem.leftBarButtonItem = backItem
         
     }
     

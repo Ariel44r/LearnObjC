@@ -13,6 +13,10 @@
 		B042A1BB21F62052009EAAF4 /* ListadoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B042A1BA21F62052009EAAF4 /* ListadoResponse.swift */; };
 		B042A1BE21F62144009EAAF4 /* Documento.swift in Sources */ = {isa = PBXBuildFile; fileRef = B042A1BD21F62144009EAAF4 /* Documento.swift */; };
 		B042A1C021F64B5C009EAAF4 /* DocumentoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B042A1BF21F64B5C009EAAF4 /* DocumentoResponse.swift */; };
+		B06FD79B2211FC0800018198 /* RouterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06FD79A2211FC0800018198 /* RouterViewController.swift */; };
+		B06FD79D2212051A00018198 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06FD79C2212051A00018198 /* CustomNavigationBar.swift */; };
+		B06FD79F221207C000018198 /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B06FD79E221207C000018198 /* Second.storyboard */; };
+		B06FD7A12212093600018198 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06FD7A02212093600018198 /* SecondViewController.swift */; };
 		B072E60421BCEBE500752CF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B072E60321BCEBE500752CF0 /* AppDelegate.m */; };
 		B072E60721BCEBE500752CF0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B072E60621BCEBE500752CF0 /* ViewController.m */; };
 		B072E60A21BCEBE500752CF0 /* First.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B072E60821BCEBE500752CF0 /* First.storyboard */; };
@@ -36,7 +40,6 @@
 		B0AB3D6221DF30C2003DD464 /* Empresa.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AB3D6121DF30C2003DD464 /* Empresa.swift */; };
 		B0BEE2DF2200C460009A6EBB /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BEE2DE2200C460009A6EBB /* SwiftViewController.swift */; };
 		B0DC74C121EFF239004AEC86 /* Proceso.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DC74C021EFF239004AEC86 /* Proceso.swift */; };
-		B0F4D03621DAA102004E9692 /* RouterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F4D03521DAA102004E9692 /* RouterViewController.m */; };
 		B0FF5805220112AB0016C1E6 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FF5804220112AB0016C1E6 /* UIColorExtension.swift */; };
 		B0FF580722011A290016C1E6 /* TabController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FF580622011A290016C1E6 /* TabController.storyboard */; };
 		B0FF580922011DA30016C1E6 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FF580822011DA30016C1E6 /* SideMenuViewController.swift */; };
@@ -74,6 +77,10 @@
 		B042A1BA21F62052009EAAF4 /* ListadoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListadoResponse.swift; sourceTree = "<group>"; };
 		B042A1BD21F62144009EAAF4 /* Documento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Documento.swift; sourceTree = "<group>"; };
 		B042A1BF21F64B5C009EAAF4 /* DocumentoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentoResponse.swift; sourceTree = "<group>"; };
+		B06FD79A2211FC0800018198 /* RouterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterViewController.swift; sourceTree = "<group>"; };
+		B06FD79C2212051A00018198 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		B06FD79E221207C000018198 /* Second.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
+		B06FD7A02212093600018198 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		B072E5FF21BCEBE500752CF0 /* LearnObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B072E60221BCEBE500752CF0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B072E60321BCEBE500752CF0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -106,8 +113,6 @@
 		B0AB3D6121DF30C2003DD464 /* Empresa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Empresa.swift; sourceTree = "<group>"; };
 		B0BEE2DE2200C460009A6EBB /* SwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
 		B0DC74C021EFF239004AEC86 /* Proceso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proceso.swift; sourceTree = "<group>"; };
-		B0F4D03421DAA102004E9692 /* RouterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RouterViewController.h; sourceTree = "<group>"; };
-		B0F4D03521DAA102004E9692 /* RouterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RouterViewController.m; sourceTree = "<group>"; };
 		B0FF5804220112AB0016C1E6 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		B0FF580622011A290016C1E6 /* TabController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabController.storyboard; sourceTree = "<group>"; };
 		B0FF580822011DA30016C1E6 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +188,14 @@
 				B042A1BF21F64B5C009EAAF4 /* DocumentoResponse.swift */,
 			);
 			name = DocumentoResponse;
+			sourceTree = "<group>";
+		};
+		B06FD7A22212432500018198 /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				B06FD7A02212093600018198 /* SecondViewController.swift */,
+			);
+			path = Second;
 			sourceTree = "<group>";
 		};
 		B072E5F621BCEBE500752CF0 = {
@@ -309,20 +322,21 @@
 			name = Entity;
 			sourceTree = "<group>";
 		};
-		B0BEE2DD2200C418009A6EBB /* RootViewController */ = {
+		B0BEE2DD2200C418009A6EBB /* First */ = {
 			isa = PBXGroup;
 			children = (
+				B0BEE2DE2200C460009A6EBB /* SwiftViewController.swift */,
 				B072E60521BCEBE500752CF0 /* ViewController.h */,
 				B072E60621BCEBE500752CF0 /* ViewController.m */,
 			);
-			path = RootViewController;
+			path = First;
 			sourceTree = "<group>";
 		};
 		B0F4D03721DAA108004E9692 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				B0F4D03421DAA102004E9692 /* RouterViewController.h */,
-				B0F4D03521DAA102004E9692 /* RouterViewController.m */,
+				B06FD79A2211FC0800018198 /* RouterViewController.swift */,
+				B06FD79C2212051A00018198 /* CustomNavigationBar.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -330,8 +344,8 @@
 		B0F4D03821DAA123004E9692 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				B0BEE2DD2200C418009A6EBB /* RootViewController */,
-				B0BEE2DE2200C460009A6EBB /* SwiftViewController.swift */,
+				B0BEE2DD2200C418009A6EBB /* First */,
+				B06FD7A22212432500018198 /* Second */,
 				B08EC17F21F11FEF00C39E57 /* APIController.swift */,
 				B0FF580822011DA30016C1E6 /* SideMenuViewController.swift */,
 			);
@@ -342,6 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				B072E60821BCEBE500752CF0 /* First.storyboard */,
+				B06FD79E221207C000018198 /* Second.storyboard */,
 				B0FF580622011A290016C1E6 /* TabController.storyboard */,
 			);
 			path = View;
@@ -457,6 +472,7 @@
 				B072E60F21BCEBE600752CF0 /* LaunchScreen.storyboard in Resources */,
 				B072E60C21BCEBE600752CF0 /* Assets.xcassets in Resources */,
 				B0FF580722011A290016C1E6 /* TabController.storyboard in Resources */,
+				B06FD79F221207C000018198 /* Second.storyboard in Resources */,
 				B072E60A21BCEBE500752CF0 /* First.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,6 +569,7 @@
 			files = (
 				B09C3F2E21DD43C60093C10F /* App.swift in Sources */,
 				B09C3F3A21DDF3C60093C10F /* JSONManager.swift in Sources */,
+				B06FD7A12212093600018198 /* SecondViewController.swift in Sources */,
 				B09C3F3621DDDC0C0093C10F /* CabResponse.swift in Sources */,
 				B09C3F2421DD403A0093C10F /* API.swift in Sources */,
 				B09C3F2021DD3D1D0093C10F /* UIViewExtension.swift in Sources */,
@@ -563,14 +580,15 @@
 				B09C3F3221DD492C0093C10F /* ActivityIndicatorManager.swift in Sources */,
 				B09C3F2C21DD43500093C10F /* WebService.swift in Sources */,
 				B072E60721BCEBE500752CF0 /* ViewController.m in Sources */,
-				B0F4D03621DAA102004E9692 /* RouterViewController.m in Sources */,
 				B0DC74C121EFF239004AEC86 /* Proceso.swift in Sources */,
 				B09C3F3021DD47940093C10F /* AlertcontrollerManager.swift in Sources */,
 				B004C26C21E5764A000AE08C /* MacroProceso.swift in Sources */,
 				B08EC18021F11FEF00C39E57 /* APIController.swift in Sources */,
 				B042A1BE21F62144009EAAF4 /* Documento.swift in Sources */,
+				B06FD79B2211FC0800018198 /* RouterViewController.swift in Sources */,
 				B09C3F2A21DD419E0093C10F /* BaseMap.swift in Sources */,
 				B0BEE2DF2200C460009A6EBB /* SwiftViewController.swift in Sources */,
+				B06FD79D2212051A00018198 /* CustomNavigationBar.swift in Sources */,
 				B0FF5805220112AB0016C1E6 /* UIColorExtension.swift in Sources */,
 				B09C3F3C21DDF4DD0093C10F /* Operators.swift in Sources */,
 				B072E61221BCEBE600752CF0 /* main.m in Sources */,
