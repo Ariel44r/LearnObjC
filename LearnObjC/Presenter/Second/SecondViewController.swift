@@ -16,7 +16,8 @@ class SecondViewController: SideMenuViewController {
 
         // Do any additional setup after loading the view.
         self.setNavigation(features: [NavigationFeature.burger, NavigationFeature.notifications])
-        self.title = "navigation title"
+        self.title = "development purpose"
+        self.sideMenuType = .shiftView
         
     }
 

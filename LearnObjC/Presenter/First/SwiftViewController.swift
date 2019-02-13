@@ -17,7 +17,7 @@ class SwiftViewController: SideMenuViewController {
         self.navigationItem.searchController = UISearchController(searchResultsController: nil)
 //        self.getSocioProTree()
         self.setNavigation(features: [NavigationFeature.burger, NavigationFeature.notifications])
-        self.title = "navigation title"
+        self.title = "development purpose"
 
     }
     
