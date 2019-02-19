@@ -93,7 +93,7 @@ enum RoundedType {
     }
     
     func setRounded(roundedType: RoundedType, color: UIColor) {
-        self.layer.cornerRadius = self.frame.width / 2
+        self.layer.cornerRadius = self.frame.height / 2
         self.layer.borderWidth = 1
         self.layer.borderColor = color.cgColor
         self.clipsToBounds = true

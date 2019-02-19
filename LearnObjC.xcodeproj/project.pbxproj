@@ -28,6 +28,7 @@
 		B072E61C21BCEBE700752CF0 /* LearnObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B072E61B21BCEBE700752CF0 /* LearnObjCTests.m */; };
 		B072E62721BCEBE700752CF0 /* LearnObjCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B072E62621BCEBE700752CF0 /* LearnObjCUITests.m */; };
 		B08EC18021F11FEF00C39E57 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08EC17F21F11FEF00C39E57 /* APIController.swift */; };
+		B0963FDF221B238000A90ACF /* DoNotHavePlaceInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0963FDE221B238000A90ACF /* DoNotHavePlaceInfoViewController.swift */; };
 		B09C3F2021DD3D1D0093C10F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09C3F1F21DD3D1D0093C10F /* UIViewExtension.swift */; };
 		B09C3F2421DD403A0093C10F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09C3F2321DD403A0093C10F /* API.swift */; };
 		B09C3F2A21DD419E0093C10F /* BaseMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09C3F2921DD419E0093C10F /* BaseMap.swift */; };
@@ -43,6 +44,8 @@
 		B0BEE2DF2200C460009A6EBB /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BEE2DE2200C460009A6EBB /* SwiftViewController.swift */; };
 		B0DC74C121EFF239004AEC86 /* Proceso.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DC74C021EFF239004AEC86 /* Proceso.swift */; };
 		B0E207DE2215CDF800B9F247 /* UnidadTrabajoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E207DD2215CDF800B9F247 /* UnidadTrabajoViewController.swift */; };
+		B0E207E32215FF8900B9F247 /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E207E12215FF8900B9F247 /* PlacesTableViewCell.swift */; };
+		B0E207E42215FF8900B9F247 /* PlacesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0E207E22215FF8900B9F247 /* PlacesTableViewCell.xib */; };
 		B0FF5805220112AB0016C1E6 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FF5804220112AB0016C1E6 /* UIColorExtension.swift */; };
 		B0FF580722011A290016C1E6 /* TabController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FF580622011A290016C1E6 /* TabController.storyboard */; };
 		B0FF580922011DA30016C1E6 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FF580822011DA30016C1E6 /* SideMenuViewController.swift */; };
@@ -103,6 +106,7 @@
 		B072E62621BCEBE700752CF0 /* LearnObjCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearnObjCUITests.m; sourceTree = "<group>"; };
 		B072E62821BCEBE700752CF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B08EC17F21F11FEF00C39E57 /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		B0963FDE221B238000A90ACF /* DoNotHavePlaceInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoNotHavePlaceInfoViewController.swift; sourceTree = "<group>"; };
 		B09C3F1E21DD3D1C0093C10F /* LearnObjC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LearnObjC-Bridging-Header.h"; sourceTree = "<group>"; };
 		B09C3F1F21DD3D1D0093C10F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		B09C3F2321DD403A0093C10F /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 		B0BEE2DE2200C460009A6EBB /* SwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
 		B0DC74C021EFF239004AEC86 /* Proceso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proceso.swift; sourceTree = "<group>"; };
 		B0E207DD2215CDF800B9F247 /* UnidadTrabajoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnidadTrabajoViewController.swift; sourceTree = "<group>"; };
+		B0E207E12215FF8900B9F247 /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
+		B0E207E22215FF8900B9F247 /* PlacesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacesTableViewCell.xib; sourceTree = "<group>"; };
 		B0FF5804220112AB0016C1E6 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		B0FF580622011A290016C1E6 /* TabController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabController.storyboard; sourceTree = "<group>"; };
 		B0FF580822011DA30016C1E6 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
@@ -343,9 +349,28 @@
 		B0E207DF2215F13400B9F247 /* LoginV6 */ = {
 			isa = PBXGroup;
 			children = (
-				B0E207DD2215CDF800B9F247 /* UnidadTrabajoViewController.swift */,
+				B0E207E02215FF5E00B9F247 /* UnidadTrabajo */,
 			);
 			path = LoginV6;
+			sourceTree = "<group>";
+		};
+		B0E207E02215FF5E00B9F247 /* UnidadTrabajo */ = {
+			isa = PBXGroup;
+			children = (
+				B0E207DD2215CDF800B9F247 /* UnidadTrabajoViewController.swift */,
+				B0963FDE221B238000A90ACF /* DoNotHavePlaceInfoViewController.swift */,
+				B0E207E52215FF8F00B9F247 /* SubViews */,
+			);
+			path = UnidadTrabajo;
+			sourceTree = "<group>";
+		};
+		B0E207E52215FF8F00B9F247 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				B0E207E12215FF8900B9F247 /* PlacesTableViewCell.swift */,
+				B0E207E22215FF8900B9F247 /* PlacesTableViewCell.xib */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 		B0F4D03721DAA108004E9692 /* Router */ = {
@@ -491,6 +516,7 @@
 				B05D7C94221474F900A92251 /* Login.storyboard in Resources */,
 				B0FF580722011A290016C1E6 /* TabController.storyboard in Resources */,
 				B06FD79F221207C000018198 /* Second.storyboard in Resources */,
+				B0E207E42215FF8900B9F247 /* PlacesTableViewCell.xib in Resources */,
 				B072E60A21BCEBE500752CF0 /* First.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -600,6 +626,7 @@
 				B09C3F2C21DD43500093C10F /* WebService.swift in Sources */,
 				B072E60721BCEBE500752CF0 /* ViewController.m in Sources */,
 				B0DC74C121EFF239004AEC86 /* Proceso.swift in Sources */,
+				B0E207E32215FF8900B9F247 /* PlacesTableViewCell.swift in Sources */,
 				B09C3F3021DD47940093C10F /* AlertcontrollerManager.swift in Sources */,
 				B004C26C21E5764A000AE08C /* MacroProceso.swift in Sources */,
 				B08EC18021F11FEF00C39E57 /* APIController.swift in Sources */,
@@ -616,6 +643,7 @@
 				B004C26821E5382B000AE08C /* Pais.swift in Sources */,
 				B0E207DE2215CDF800B9F247 /* UnidadTrabajoViewController.swift in Sources */,
 				B042A1C021F64B5C009EAAF4 /* DocumentoResponse.swift in Sources */,
+				B0963FDF221B238000A90ACF /* DoNotHavePlaceInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

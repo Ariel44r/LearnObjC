@@ -21,9 +21,9 @@
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="430-8v-f41" kind="relationship" relationship="viewControllers" id="gzR-9B-PZC"/>
-                        <segue destination="HZN-Ew-vFr" kind="relationship" relationship="viewControllers" id="bOp-Yu-uly"/>
-                        <segue destination="iWD-HL-Zn9" kind="relationship" relationship="viewControllers" id="9zV-Yf-00a"/>
+                        <segue destination="iWD-HL-Zn9" kind="relationship" relationship="viewControllers" id="wgx-cQ-uDs"/>
+                        <segue destination="430-8v-f41" kind="relationship" relationship="viewControllers" id="gO0-GY-Znz"/>
+                        <segue destination="HZN-Ew-vFr" kind="relationship" relationship="viewControllers" id="gqZ-vd-chJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DYT-Gv-Dpk" userLabel="First Responder" sceneMemberID="firstResponder"/>

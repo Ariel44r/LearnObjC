@@ -8,13 +8,12 @@
 
 import Foundation
 
-@objc class ListadoResponse: BaseMap {
-    @objc var cabResponse: CabResponse = CabResponse()
+@objc class ListadoResponse: BaseResponse {
     @objc var documentos: [Documento] = []
     
     required init() { }
     override func map(map: JSON) {
-        self.cabResponse <- map["cabResponse"]
+        super.map(map: map)
         self.documentos <> map["responseSocio"]
         
     }

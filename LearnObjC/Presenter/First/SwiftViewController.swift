@@ -12,10 +12,9 @@ class SwiftViewController: SideMenuViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
         self.navigationItem.searchController = UISearchController(searchResultsController: nil)
-//        self.getSocioProTree()
+        self.getSocioProTree()
         self.setNavigation(features: [NavigationFeature.burger, NavigationFeature.notifications])
         self.title = "development purpose"
 

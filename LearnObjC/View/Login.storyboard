@@ -102,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yOe-be-nQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2774" y="-935"/>
+            <point key="canvasLocation" x="2774" y="-1284"/>
         </scene>
         <!--Unidad Trabajo View Controller-->
         <scene sceneID="Tdn-ff-myg">
@@ -116,9 +116,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TRv-aC-Zbg" userLabel="PlaceView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TRv-aC-Zbg" userLabel="PlaceView">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KMF-qr-wUU">
                                         <rect key="frame" x="0.0" y="-20" width="377" height="667"/>
@@ -167,50 +166,12 @@
                                                 <color key="textColor" red="0.28235294119999998" green="0.28235294119999998" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6DW-o6-EbM">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6DW-o6-EbM">
                                                 <rect key="frame" x="0.0" y="254" width="377" height="291"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="separatorColor" red="0.56470588239999997" green="0.56470588239999997" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="InfoPlacesCell" rowHeight="60" id="gGb-d4-zGB" customClass="PlaceCellTableViewCell">
-                                                        <rect key="frame" x="0.0" y="28" width="377" height="60"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gGb-d4-zGB" id="IgP-b1-mqa">
-                                                            <rect key="frame" x="0.0" y="0.0" width="377" height="59.5"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BS2-di-Vhq">
-                                                                    <rect key="frame" x="14" y="8" width="43" height="43"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="1NB-0o-qM6">
-                                                                    <rect key="frame" x="71" y="21" width="266" height="21"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
-                                                                    <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZ4-HX-0Q5">
-                                                                    <rect key="frame" x="337" y="18" width="25" height="25"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                                    <state key="normal" image="erase_iconL"/>
-                                                                </button>
-                                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="divider" translatesAutoresizingMaskIntoConstraints="NO" id="QSQ-hr-u2E">
-                                                                    <rect key="frame" x="0.0" y="51" width="377" height="3"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                                </imageView>
-                                                            </subviews>
-                                                        </tableViewCellContentView>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <connections>
-                                                            <outlet property="btnRemovePlace" destination="kZ4-HX-0Q5" id="9r4-9i-aus"/>
-                                                            <outlet property="imgAvatar" destination="BS2-di-Vhq" id="z6n-a0-qfs"/>
-                                                            <outlet property="lblDescPlace" destination="1NB-0o-qM6" id="5u1-dh-FaA"/>
-                                                        </connections>
-                                                    </tableViewCell>
-                                                </prototypes>
                                                 <connections>
                                                     <outlet property="dataSource" destination="zGb-qH-nub" id="5h7-Nd-s4a"/>
                                                     <outlet property="delegate" destination="zGb-qH-nub" id="XTa-h5-s7w"/>
@@ -271,13 +232,20 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.99963909390000005" green="1" blue="0.99975615740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dDI-au-uCc" firstAttribute="bottom" secondItem="TRv-aC-Zbg" secondAttribute="bottom" id="QpX-t0-tCy"/>
+                            <constraint firstItem="TRv-aC-Zbg" firstAttribute="height" secondItem="dDI-au-uCc" secondAttribute="height" id="S81-HK-per"/>
+                            <constraint firstItem="TRv-aC-Zbg" firstAttribute="width" secondItem="dDI-au-uCc" secondAttribute="width" id="gpO-MH-eut"/>
+                            <constraint firstItem="TRv-aC-Zbg" firstAttribute="centerX" secondItem="NRa-Yv-i8P" secondAttribute="centerX" id="kZb-vF-VFy"/>
+                            <constraint firstItem="TRv-aC-Zbg" firstAttribute="top" secondItem="dDI-au-uCc" secondAttribute="top" id="wjs-40-Nnf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dDI-au-uCc"/>
                     </view>
                     <navigationItem key="navigationItem" id="7g9-OJ-lNV"/>
@@ -289,6 +257,7 @@
                         <segue destination="a1S-dT-eMI" kind="show" identifier="goToConfiguraHorarioIpad" id="hvp-DV-TQY"/>
                         <segue destination="c5b-RC-p4m" kind="show" identifier="goToHorarios" id="Gfy-Wb-Pk2"/>
                         <segue destination="3nw-UR-u3B" kind="show" identifier="gotoFinalScreenN" id="ccZ-m7-YkC"/>
+                        <segue destination="ypx-oW-sUi" kind="presentation" identifier="doNotHavePlaceSegue" id="mTD-yH-lb6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4pK-v4-EoU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1030,10 +999,10 @@
             </objects>
             <point key="canvasLocation" x="1306" y="798"/>
         </scene>
-        <!--Tutorial Simple View Controller-->
+        <!--Do Not Have Place Info View Controller-->
         <scene sceneID="B9z-Ph-l78">
             <objects>
-                <viewController modalPresentationStyle="overCurrentContext" id="ypx-oW-sUi" customClass="TutorialSimpleViewController" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overCurrentContext" id="ypx-oW-sUi" customClass="DoNotHavePlaceInfoViewController" customModule="LearnObjC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lhn-3E-sNB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1076,7 +1045,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="closeView:" destination="ypx-oW-sUi" eventType="touchUpInside" id="WJf-Zx-He2"/>
+                                            <action selector="btnDismissInfo:" destination="ypx-oW-sUi" eventType="touchUpInside" id="w3J-fu-gSE"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No tengo lugar fijo." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPs-TV-tml">
@@ -1124,13 +1093,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="VIb-Vd-6tE"/>
                     </view>
-                    <connections>
-                        <outlet property="modalCuadroTexto" destination="JP3-ol-P5g" id="GMB-1c-JNw"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="55m-KP-hUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5046" y="-143"/>
+            <point key="canvasLocation" x="3938" y="-143"/>
         </scene>
         <!--Tutorial Simple View Controller-->
         <scene sceneID="Vp7-S0-Hjs">
@@ -1674,11 +1640,11 @@
             </objects>
             <point key="canvasLocation" x="4631" y="637"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="Qs8-uP-fcc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Ema-fM-lay" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="o0d-Nz-1CN"/>
+                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="o0d-Nz-1CN"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TbI-ii-LQR">
@@ -1691,7 +1657,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jai-cs-YBl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2774" y="-1722"/>
+            <point key="canvasLocation" x="2774" y="-2052"/>
         </scene>
     </scenes>
     <resources>
@@ -1868,7 +1834,6 @@ MiY3AAAAAAAAAgEAAAAAAAAAWQAAAAAAAAAAAAAAAAAAJjk
 </mutableData>
         </image>
         <image name="checkFinal" width="104" height="104"/>
-        <image name="divider" width="379" height="3"/>
         <image name="erase_iconL" width="22" height="22"/>
         <image name="general_bg_tenue" width="375" height="812"/>
         <image name="ico_agrega_horario" width="22" height="22"/>

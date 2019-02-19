@@ -8,13 +8,12 @@
 
 import Foundation
 
-@objc class DocumentoResponse: BaseMap {
-    @objc var cabResponse: CabResponse = CabResponse()
+@objc class DocumentoResponse: BaseResponse {
     @objc var documento: String!
     
     required init() { }
     override func map(map: JSON) {
-        self.cabResponse <- map["cabResponse"]
+        super.map(map: map)
         self.documento <- map["documento"]
         
     }

@@ -8,8 +8,7 @@
 
 import Foundation
 
-@objc class SocioProTreeResponse: BaseMap {
-    @objc var cabResponse: CabResponse = CabResponse()
+@objc class SocioProTreeResponse: BaseResponse {
     @objc var empresas: [Empresa] = []
     
     enum Keys: String, CodingKey {
@@ -27,6 +26,7 @@ import Foundation
     
     required init() { }
     override func map(map: JSON) {
+        super.map(map: map)
         self.cabResponse <- map[Keys.cabResponse.rawValue]
         self.empresas <> map[Keys.empresas.rawValue]
         

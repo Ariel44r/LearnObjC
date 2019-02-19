@@ -19,14 +19,18 @@ import UIKit
     var isOpen: Bool = false
     var burgerItem: UIBarButtonItem!
     var maxWidth: CGFloat!
-    var sideTable: TableSideMenu = TableSideMenu()
+    var tableSideMenu: TableSideMenu!
     let statusBarHeight: CGFloat = 24
     var blurView: UIView!
-    var viewControllers: [UIViewController]?
     var sideMenuType: SideMenuType = .overView
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setLayout()
+        
+    }
+    
+    @objc func setLayout() {
         self.appDelegate = UIApplication.shared.delegate as? AppDelegate
         self.window = self.appDelegate.window
         self.appFrame = self.window.frame
@@ -44,12 +48,13 @@ import UIKit
         self.sideMenu = {
             let view = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: appFrame.height))
             view.makeViewWith(features: [.color(.get(.blue))])
-            view.addSubview(self.sideTable.tableView)
+            self.tableSideMenu = TableSideMenu.shared
+            view.addSubview(self.tableSideMenu.tableView)
             return view
         }()
         self.appDelegate.window.addSubview(sideMenu)
-        self.sideTable.set()
-        self.sideTable.tableView.frame = CGRect(x: 0, y: self.statusBarHeight, width: self.sideMenu.frame.width, height: self.sideMenu.frame.height - self.statusBarHeight)
+        self.tableSideMenu.set()
+        self.tableSideMenu.tableView.frame = CGRect(x: 0, y: self.statusBarHeight, width: self.sideMenu.frame.width, height: self.sideMenu.frame.height - self.statusBarHeight)
         
     }
     
@@ -68,13 +73,14 @@ import UIKit
     }
     
     @objc func panGesture(_ sender: UIPanGestureRecognizer) {
+        if self.tableSideMenu == nil { self.setLayout() }
         self.appFrame = self.window.frame
         let offset: CGPoint = sender.translation(in: window)
         switch sender.state {
         case .changed:
             if self.sideMenu.frame.width <= 0.85*appFrame.width && (!self.isOpen ? offset.x > 0 : self.sideMenu.frame.width > 0) && (self.maxWidth + offset.x) >= 0 {
                 self.sideMenu.frame = CGRect(x: 0, y: 0, width: self.isOpen ? self.maxWidth + offset.x : offset.x, height: appFrame.height)
-                self.sideTable.tableView.frame = CGRect(x: 0, y: self.statusBarHeight, width: self.isOpen ? self.maxWidth + offset.x : offset.x, height: appFrame.height - self.statusBarHeight)
+                self.tableSideMenu.tableView.frame = CGRect(x: 0, y: self.statusBarHeight, width: self.isOpen ? self.maxWidth + offset.x : offset.x, height: appFrame.height - self.statusBarHeight)
                 if let layoutContainerView: UIView = window?.rootViewController?.view as UIView? {
                     layoutContainerView.frame = CGRect(x: self.sideMenuType == .shiftView ? self.sideMenu.frame.width : 0, y: 0, width: appFrame.width, height: appFrame.height)
                     
@@ -89,10 +95,11 @@ import UIKit
     }
     
     @objc func completeAmination() {
+        if self.tableSideMenu == nil { self.setLayout() }
         self.appFrame = self.window.frame
         UIView.animate(withDuration: 0.2, animations: {
             self.sideMenu.frame = CGRect(x: 0, y: 0, width: self.isOpen ? self.maxWidth : 0, height: self.appFrame.height)
-            self.sideTable.tableView.frame = CGRect(x: 0, y: self.statusBarHeight, width: self.isOpen ? self.maxWidth : 0, height: self.appFrame.height - self.statusBarHeight)
+            self.tableSideMenu.tableView.frame = CGRect(x: 0, y: self.statusBarHeight, width: self.isOpen ? self.maxWidth : 0, height: self.appFrame.height - self.statusBarHeight)
             if let layoutContainerView: UIView = self.window?.rootViewController?.view as UIView? {
                 layoutContainerView.frame = CGRect(x: self.isOpen ? (self.sideMenuType == .shiftView ? self.maxWidth : 0) : 0, y: 0, width: self.appFrame.width, height: self.appFrame.height)
                 
@@ -108,6 +115,11 @@ import UIKit
                 self.blurView.alpha = self.isOpen ? 1 : 0
                 self.isOpen ? layoutContainerView.addSubview(self.blurView) : self.blurView.removeFromSuperview()
 
+            }, completion: { _ in
+                if !self.isOpen {
+                    self.tableSideMenu = nil
+                    
+                }
             })
         }
     }
@@ -116,9 +128,13 @@ import UIKit
 
 // MARK: UITableViewFeatures
 @objc class TableSideMenu: NSObject, UITableViewDelegate, UITableViewDataSource {
+    @objc static var shared: TableSideMenu! = TableSideMenu()
     @objc var tableView = UITableView()
+    @objc var viewControllers: [UIViewController]!
     
-    override init() {}
+    override init() {
+        debugPrint("SideTable did instanced")
+    }
     
     func set() {
         self.tableView = {
@@ -146,6 +162,12 @@ import UIKit
         cell.makeViewWith(features: [.color(indexPath.row%2==0 ? .white : .lightGray)])
         cell.textLabel?.text = "hey, this is only for development purpose"
         return cell
+        
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.alpha = 0
+        UIView.animate(withDuration: 0.3, animations: { cell.alpha = 1 })
         
     }
 }
