@@ -123,7 +123,7 @@ enum RoundedType {
 }
 
 @objc public class LOG: NSObject {
-    @objc class func debugLog(_ object: Any) {
+    @objc class func debug(_ object: Any) {
         debugPrint(object)
         
     }

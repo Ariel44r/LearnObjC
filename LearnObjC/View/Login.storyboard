@@ -1181,7 +1181,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KFM-Az-Hix" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2774" y="3136"/>
+            <point key="canvasLocation" x="2774" y="2661"/>
         </scene>
         <!--Horarios-->
         <scene sceneID="v2b-2N-WKO">
@@ -1848,7 +1848,7 @@ MiY3AAAAAAAAAgEAAAAAAAAAWQAAAAAAAAAAAAAAAAAAJjk
         <image name="v5_page1_ini" width="523" height="556"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KgB-KQ-0IP"/>
+        <segue reference="JPC-0g-OSN"/>
         <segue reference="ccZ-m7-YkC"/>
     </inferredMetricsTieBreakers>
 </document>

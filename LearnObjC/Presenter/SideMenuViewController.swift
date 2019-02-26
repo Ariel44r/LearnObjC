@@ -17,24 +17,34 @@ import UIKit
     var sideMenu: UIView!
     var panGesture: UIPanGestureRecognizer!
     var isOpen: Bool = false
+    var enable: Bool = false
     var burgerItem: UIBarButtonItem!
     var maxWidth: CGFloat!
+    var minWidth: CGFloat!
     var tableSideMenu: TableSideMenu!
     let statusBarHeight: CGFloat = 24
     var blurView: UIView!
     var sideMenuType: SideMenuType = .overView
 
+    // MARK: Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setLayout()
         
     }
     
+    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+        if self.isOpen { self.completeAmination() }
+        
+    }
+    
+    // MARK: Methods & Targets
     @objc func setLayout() {
         self.appDelegate = UIApplication.shared.delegate as? AppDelegate
         self.window = self.appDelegate.window
         self.appFrame = self.window.frame
         self.maxWidth = 300
+        self.minWidth = 100
         self.panGesture = UIPanGestureRecognizer(target: self, action: #selector(self.panGesture(_:)))
         self.view.addGestureRecognizer(self.panGesture)
         self.blurView = {
@@ -58,14 +68,6 @@ import UIKit
         
     }
     
-    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
-        if self.isOpen {
-            self.completeAmination()
-            
-        }
-    }
-    
-    // MARK: Targets
     @objc func showBurgerMenu(_ sender: Any) {
         self.isOpen = !self.isOpen
         self.completeAmination()
@@ -77,8 +79,11 @@ import UIKit
         self.appFrame = self.window.frame
         let offset: CGPoint = sender.translation(in: window)
         switch sender.state {
+        case .began:
+            self.enable = !self.isOpen ? sender.location(in: window).x < self.minWidth : true
+            
         case .changed:
-            if self.sideMenu.frame.width <= 0.85*appFrame.width && (!self.isOpen ? offset.x > 0 : self.sideMenu.frame.width > 0) && (self.maxWidth + offset.x) >= 0 {
+            if self.sideMenu.frame.width <= 0.85*appFrame.width && (!self.isOpen ? offset.x > 0 : self.sideMenu.frame.width > 0) && (self.maxWidth + offset.x) >= 0 && self.enable {
                 self.sideMenu.frame = CGRect(x: 0, y: 0, width: self.isOpen ? self.maxWidth + offset.x : offset.x, height: appFrame.height)
                 self.tableSideMenu.tableView.frame = CGRect(x: 0, y: self.statusBarHeight, width: self.isOpen ? self.maxWidth + offset.x : offset.x, height: appFrame.height - self.statusBarHeight)
                 if let layoutContainerView: UIView = window?.rootViewController?.view as UIView? {
@@ -87,9 +92,11 @@ import UIKit
                 }
             }
         case .ended:
-            self.isOpen = offset.x > 100
-            self.completeAmination()
-            
+            if self.enable {
+                self.isOpen = offset.x > self.minWidth
+                self.completeAmination()
+                
+            }
         default: break
         }
     }

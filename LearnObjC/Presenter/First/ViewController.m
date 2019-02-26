@@ -32,19 +32,19 @@
     
     WebService* ws = [[WebService alloc] initWithEndPoint:@"https://sproapi-staging.vapor.cloud/JWT_ConsultaEstructura" method:HTTPMethodPOST parameters:[NSDictionary new] headers:[NSDictionary new] name:nil];
     [[APIController new] post2APIWithWS:ws completion:^(SocioProTreeResponse *socioProResponse){
-        [LOG debugLog:socioProResponse.cabResponse.mensResponse];
+        [LOG debug:socioProResponse.cabResponse.mensResponse];
         
     }];
     
     WebService* ws2 = [[WebService alloc] initWithEndPoint:@"https://sproapi-staging.vapor.cloud/JWT_ConsultaListadoProceso" method:HTTPMethodPOST parameters:[NSDictionary new] headers:[NSDictionary new] name:nil];
     [[APIController new] post2API2WithWS:ws2 completion:^(ListadoResponse *socioProResponse){
-        [LOG debugLog:socioProResponse.cabResponse.mensResponse];
+        [LOG debug:socioProResponse.cabResponse.mensResponse];
         
     }];
     
     WebService* ws3 = [[WebService alloc] initWithEndPoint:@"https://sproapi-staging.vapor.cloud/JWT_ConsultaDocumento" method:HTTPMethodPOST parameters:[NSDictionary new] headers:[NSDictionary new] name:nil];
     [[APIController new] getDocumentWithWS:ws3 completion:^(DocumentoResponse *socioProResponse){
-        [LOG debugLog:socioProResponse.cabResponse.mensResponse];
+        [LOG debug:socioProResponse.cabResponse.mensResponse];
         
     }];
 }

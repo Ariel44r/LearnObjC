@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIViewController {
+@objc extension UIViewController {
     @objc func setNavigation(features: [Any]) {
         if let navigationController = self.navigationController as? RouterViewController {
             navigationController.set(controller: self, features: features)

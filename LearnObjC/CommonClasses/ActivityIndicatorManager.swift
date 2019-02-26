@@ -8,6 +8,8 @@
 
 import UIKit
 
+enum ProgressViewWill { case appear, disappear }
+
 class ActivityIndicatorManager: UIView {
     
     // MARK: Attributes
@@ -27,8 +29,8 @@ class ActivityIndicatorManager: UIView {
     }
     
     // MARK: Methods
-    func progressViewWill(appear: Bool) {
-        if appear {
+    func progressViewWill(_ action: ProgressViewWill) {
+        if action == .appear {
             self.alpha = 0
             let controller = AlertControllerManager.getTopViewController()
             controller.view.addSubview(self)
