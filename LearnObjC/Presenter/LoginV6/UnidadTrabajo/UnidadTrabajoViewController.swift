@@ -7,9 +7,13 @@
 //
 
 import UIKit
-import ObjectiveC
 
-class UnidadTrabajoViewController: UIViewController {
+class BaseViewController: UIViewController {
+    var canRotate: Bool = false
+    
+}
+
+class UnidadTrabajoViewController: BaseViewController {
     
     // MARK: Attributes
     var placesToWork: [String] = []
@@ -25,7 +29,7 @@ class UnidadTrabajoViewController: UIViewController {
         super.viewDidLoad()
         self.lblTitle.text = "Selecciona tus \n lugares de trabajo:"
         UserDefaults.standard.set(true, forKey: "canRotateViewControllerFlag")
-
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {

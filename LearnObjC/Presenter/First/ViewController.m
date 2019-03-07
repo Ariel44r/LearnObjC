@@ -27,6 +27,39 @@
     
 }
 
+-(void)dispatch{
+    dispatch_group_t group = dispatch_group_create();
+    //2.create queue
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    //3.just use async method
+    //3.1.excute 3 times of for loop
+    dispatch_group_async(group, queue, ^{
+        for (NSInteger i = 0; i < 25; i++) {
+            NSLog(@"HUGO group-01 - %@", [NSThread currentThread]);
+        }
+    });
+    
+    //3.2.execute 8 times of for loop for main quque
+    dispatch_group_async(group, dispatch_get_main_queue(), ^{
+        for (NSInteger i = 0; i < 50; i++) {
+            NSLog(@"HUGO group-02 MAIN - %@", [NSThread currentThread]);
+        }
+    });
+    
+    //3.3.execute 5 times of for loop
+    dispatch_group_async(group, queue, ^{
+        for (NSInteger i = 0; i < 75; i++) {
+            NSLog(@"HUGO group-03 - %@", [NSThread currentThread]);
+        }
+    });
+    
+    //4.notify when finished
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        NSLog(@"HUGO finish - %@", [NSThread currentThread]);
+    });
+}
+
 - (void)refresh:(UIRefreshControl*)refresh{
     [refresh endRefreshing];
     

@@ -45,6 +45,14 @@ extension SwiftViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
         
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.alpha = 0
+        UIView.animate(withDuration: 0.5, animations: {
+            cell.alpha = 1
+            
+        })
+    }
 }
 
 extension SwiftViewController: NavigationDelegate {
