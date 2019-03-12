@@ -20,7 +20,9 @@ class DetailLocationViewController: UIViewController {
     var tracks: [TrackObject]?
     var filterTracks: [TrackObject] = []
     var tableDataSource: TableDataSource = .original
+    var titles: [String] = []
 
+    // MRK: Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,61 +32,83 @@ class DetailLocationViewController: UIViewController {
             self.navigationController?.navigationBar.prefersLargeTitles = true
             self.navigationController?.navigationItem.searchController = UISearchController(searchResultsController: nil)
         }
-        self.tableView.reloadData()
+        if let _ = self.tracks as [TrackObject]? {
+            self.titles =  self.getHeaderTitles()
+            self.tableView.reloadData()
+            
+        }
+    }
+    
+    // MARK: OwnMethods
+    func getHeaderTitles() -> [String] {
+        var titles: [String] = []
+        self.tracks?.forEach({
+            let fullString: String = Date(timeIntervalSince1970: $0.arrivalDate).description(with: .autoupdatingCurrent)
+            let arrayString: [String] = fullString.replacingOccurrences(of: "Central Standard Time", with: "").components(separatedBy: ",")
+            if ($0.departurDate - $0.arrivalDate) < 3600*24 {
+                titles.append("\(arrayString[0]),\(arrayString[1])")
+                
+            }
+        })
+        return titles.uniqueElements
         
     }
 
 }
 
-// MARK: UITableView
+public extension Sequence where Element: Equatable {
+    var uniqueElements: [Element] {
+        return self.reduce(into: []) {
+            uniqueElements, element in
+            
+            if !uniqueElements.contains(element) {
+                uniqueElements.append(element)
+            }
+        }
+    }
+}
+
+// MARK: UITableViewStubs
 extension DetailLocationViewController: UITableViewDelegate, UITableViewDataSource {
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view: TitleTableViewCell = UIView.fromNib()
+        view.set(title: self.titles[section])
+        return view
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+        
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.titles.count
+        
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300//hardCode heightForRow
+        return 400//hardCode heightForRow
         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch self.tableDataSource {
-        case .original: return self.tracks?.count ?? 0
+        case .original:
+            return self.tracks!.filter({ $0.dateNow!.contains(self.titles[section]) }).count
         case .filter: return self.filterTracks.count
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let trackObject = self.tableDataSource == .filter ? self.filterTracks[indexPath.row] : self.tracks![indexPath.row]
+        let trackObject = self.tableDataSource == .filter ? self.filterTracks[indexPath.row] : self.tracks!.filter({ $0.dateNow.contains(self.titles[indexPath.section])})[indexPath.row]
         return {
             let cell: TrackCellTableViewCell = UIView.fromNib()
             cell.set(trackObject)
             return cell
             
         }()
-    }
-    
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if let cell = cell as? TrackCellTableViewCell {
-            cell.willAppear()
-            
-        }
-    }
-    
-}
-
-// MARK: UITableViewCell
-class MyCell: UITableViewCell {
-    
-    @IBOutlet weak var dateNow: UILabel!
-    @IBOutlet weak var arrived: UILabel!
-    @IBOutlet weak var ended: UILabel!
-    
-    func set(_ trackObject: TrackObject) {
-        self.dateNow.text = "dateNow: \n\(trackObject.dateNow!)"
-            .replacingOccurrences(of: "Central Standard Time", with: "")
-        self.arrived.text = "arrived: \n\(Date(timeIntervalSince1970: trackObject.arrivalDate).description(with: .current))"
-            .replacingOccurrences(of: "Central Standard Time", with: "")
-        self.ended.text = "departur: \n\(Date(timeIntervalSince1970: trackObject.departurDate).description(with: .current))"
-            .replacingOccurrences(of: "Central Standard Time", with: "")
-        
     }
     
 }

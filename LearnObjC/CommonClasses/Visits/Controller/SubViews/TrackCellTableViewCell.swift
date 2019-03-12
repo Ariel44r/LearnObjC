@@ -34,25 +34,25 @@ class TrackCellTableViewCell: UITableViewCell {
     
     func set(_ trackObject: TrackObject) {
         self.trackObject = trackObject
+        let calendar = Calendar.current
         self.lblDateNow.text = "dateNow: \n\(trackObject.dateNow!)"
             .replacingOccurrences(of: "Central Standard Time", with: "")
-        self.lblArrive.text = "arrived: \n\(Date(timeIntervalSince1970: trackObject.arrivalDate).description(with: .current))"
-            .replacingOccurrences(of: "Central Standard Time", with: "")
-        self.lblDepartur.text = "departur: \n\(Date(timeIntervalSince1970: trackObject.departurDate).description(with: .current))"
-            .replacingOccurrences(of: "Central Standard Time", with: "")
+        let arriveDate: Date = Date(timeIntervalSince1970: trackObject.arrivalDate)
+        self.lblArrive.text = "arrived at: \n\(calendar.component(.hour, from: arriveDate)) : \(calendar.component(.minute, from: arriveDate)) : \(calendar.component(.second, from: arriveDate))"
+        let departureDate: Date = Date(timeIntervalSince1970: trackObject.departurDate)
+        self.lblDepartur.text = "departur at: \n\(calendar.component(.hour, from: departureDate)) : \(calendar.component(.minute, from: departureDate)) : \(calendar.component(.second, from: departureDate))"
+        self.willAppear()
         
     }
     
     func willAppear() {
         if let annotation = self.trackObject.annotation as MKPointAnnotation? {
             self.mapView.addAnnotation(annotation)
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime(uptimeNanoseconds: 500000), execute: {
-                let span = MKCoordinateSpan(latitudeDelta: 0.008, longitudeDelta: 0.008)
-                let region = MKCoordinateRegion(center: annotation.coordinate, span: span)
-                self.mapView.setRegion(region, animated: false)
-                self.mapView.isUserInteractionEnabled = false
-                
-            })
+            let span = MKCoordinateSpan(latitudeDelta: 0.008, longitudeDelta: 0.008)
+            let region = MKCoordinateRegion(center: annotation.coordinate, span: span)
+            self.mapView.setRegion(region, animated: false)
+            self.mapView.isUserInteractionEnabled = false
+            
         }
     }
     

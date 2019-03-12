@@ -20,6 +20,7 @@ class VisitViewController: UIViewController {
     let locationManager = CLLocationManager()
     let keyLogsName: String = "visitLOGSystem"
     var tracks: [TrackObject] = []
+    let defaultSpan: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.06, longitudeDelta: 0.06)
     
     // MARK: Overrides
     override func viewDidLoad() {
@@ -30,7 +31,6 @@ class VisitViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(self.goToDetail))
         self.locationManager.delegate = self
         self.mapView.delegate = self
-        self.mapView.showsUserLocation = true
         self.requestForNotifications()
         self.requestForEnableLocationServices()
         
@@ -44,23 +44,37 @@ class VisitViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let controller = segue.destination as! DetailLocationViewController
-        controller.tracks = self.tracks
+        controller.tracks = self.tracks.sorted(by: { $0.arrivalDate > $1.arrivalDate })
         
     }
     
     @IBAction func btnCurrentLocation(_ sender: Any) {
         if CLLocationManager.authorizationStatus() == .authorizedAlways {
-            let span = MKCoordinateSpan(latitudeDelta: 0.075, longitudeDelta: 0.075)
-            let region = MKCoordinateRegion(center: self.locationManager.location!.coordinate, span: span)
+            let region = MKCoordinateRegion(center: self.locationManager.location!.coordinate, span: self.defaultSpan)
             self.mapView.setRegion(region, animated: true)
             
         }
-        
+        if let sender = sender as? UIButton {
+            UIView.animate(withDuration: 0.3, animations: {
+                sender.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+                
+            }, completion: { _ in
+                UIView.animate(withDuration: 0.3, animations: {
+                    sender.transform = CGAffineTransform(scaleX: 1, y: 1)
+                    
+                })
+            })
+        }
     }
     
     @objc func goToDetail() {
-        self.performSegue(withIdentifier: "detailSegue", sender: self.tracks)
-        
+        if self.tracks.isEmpty {
+            AlertControllerManager.showAlert(controller: self, alertStyle: .alert, title: "No existen registros de visitas", message: "Aún no cuentas con datos de visitas", actions: nil)
+            
+        } else {
+            self.performSegue(withIdentifier: "detailSegue", sender: self.tracks)
+
+        }
     }
     
     func testLogs() {
@@ -95,6 +109,7 @@ class VisitViewController: UIViewController {
             self.locationManager.requestAlwaysAuthorization()
             
         case .authorizedAlways:
+            self.mapView.showsUserLocation = true
             self.locationManager.startMonitoringVisits()
             
         }

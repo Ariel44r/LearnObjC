@@ -30,10 +30,10 @@
 	</array>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleDefault</string>
-    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-    <string>Your location is required for always tracking you xD</string>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>Your location is required for tracking you xD</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Your location is required for always</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Your location is required for when in use</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
