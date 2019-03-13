@@ -45,7 +45,7 @@ class VisitViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let controller = segue.destination as! DetailLocationViewController
-        controller.tracks = self.tracks.sorted(by: { $0.arrivalDate > $1.arrivalDate })
+        controller.tracks = (sender as! [TrackObject]).sorted(by: { $0.arrivalDate > $1.arrivalDate })
         
     }
     

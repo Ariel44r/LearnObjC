@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MrO-lC-pG5">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,14 +15,14 @@
             <objects>
                 <viewController title="My Location" id="WFf-D5-3iH" customClass="VisitViewController" customModule="LearnObjC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a4r-VU-KeC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Udh-TC-l78">
-                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMn-3j-YSM">
-                                <rect key="frame" x="313" y="366.5" width="50" height="50"/>
+                                <rect key="frame" x="349" y="476" width="50" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="5fB-4M-o1A"/>
@@ -40,8 +40,8 @@
                             <constraint firstItem="Udh-TC-l78" firstAttribute="top" secondItem="iOI-yF-YhV" secondAttribute="top" id="80g-un-Nvc"/>
                             <constraint firstItem="Udh-TC-l78" firstAttribute="bottom" secondItem="iOI-yF-YhV" secondAttribute="bottom" id="830-jB-ERg"/>
                             <constraint firstItem="Udh-TC-l78" firstAttribute="centerY" secondItem="iOI-yF-YhV" secondAttribute="centerY" id="FlM-tg-hWO"/>
-                            <constraint firstItem="UMn-3j-YSM" firstAttribute="leading" secondItem="iOI-yF-YhV" secondAttribute="leading" constant="313" id="V2D-M2-c1E"/>
                             <constraint firstItem="Udh-TC-l78" firstAttribute="width" secondItem="a4r-VU-KeC" secondAttribute="width" id="YyY-Ip-Qi2"/>
+                            <constraint firstItem="iOI-yF-YhV" firstAttribute="trailing" secondItem="UMn-3j-YSM" secondAttribute="trailing" constant="15" id="fKF-J8-eiN"/>
                             <constraint firstItem="UMn-3j-YSM" firstAttribute="centerY" secondItem="iOI-yF-YhV" secondAttribute="centerY" id="xJF-EA-IZS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iOI-yF-YhV"/>
@@ -61,11 +61,11 @@
             <objects>
                 <viewController id="8Bf-Ci-CxT" customClass="DetailLocationViewController" customModule="LearnObjC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FE9-DO-XJ8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="M85-IJ-hOE">
-                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="8Bf-Ci-CxT" id="1O8-Oo-lsd"/>
@@ -96,7 +96,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MrO-lC-pG5" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="VDg-FU-ChP">
-                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
