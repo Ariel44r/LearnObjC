@@ -16,6 +16,8 @@ class TrackCellTableViewCell: UITableViewCell {
     @IBOutlet weak var lblArrive: UILabel!
     @IBOutlet weak var lblDepartur: UILabel!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var arrivedIndicator: UIView!
+    @IBOutlet weak var departureIndicator: UIView!
     
     // MARK: Attributes
     var trackObject: TrackObject!
@@ -33,14 +35,16 @@ class TrackCellTableViewCell: UITableViewCell {
     }
     
     func set(_ trackObject: TrackObject) {
+        self.arrivedIndicator.makeViewWith(features: [.roundedView(.full, .clear), .bordered(.black, 1)])
+        self.departureIndicator.makeViewWith(features: [.roundedView(.full, .clear), .bordered(.black, 1)])
         self.trackObject = trackObject
         let calendar = Calendar.current
-        self.lblDateNow.text = "dateNow: \n\(trackObject.dateNow!)"
+        self.lblDateNow.text = "notified at: \(trackObject.dateNow!)"
             .replacingOccurrences(of: "Central Standard Time", with: "")
         let arriveDate: Date = Date(timeIntervalSince1970: trackObject.arrivalDate)
-        self.lblArrive.text = "arrived at: \n\(calendar.component(.hour, from: arriveDate)) : \(calendar.component(.minute, from: arriveDate)) : \(calendar.component(.second, from: arriveDate))"
+        self.lblArrive.text = "arrived at: \(calendar.component(.hour, from: arriveDate).zero()):\(calendar.component(.minute, from: arriveDate).zero()):\(calendar.component(.second, from: arriveDate).zero())"
         let departureDate: Date = Date(timeIntervalSince1970: trackObject.departurDate)
-        self.lblDepartur.text = "departur at: \n\(calendar.component(.hour, from: departureDate)) : \(calendar.component(.minute, from: departureDate)) : \(calendar.component(.second, from: departureDate))"
+        self.lblDepartur.text = "departur at: \(calendar.component(.hour, from: departureDate).zero()):\(calendar.component(.minute, from: departureDate).zero()):\(calendar.component(.second, from: departureDate).zero())"
         self.willAppear()
         
     }
@@ -56,4 +60,10 @@ class TrackCellTableViewCell: UITableViewCell {
         }
     }
     
+}
+
+extension Int {
+    func zero() -> String {
+        return self == 0 ? "00" : (self < 10) ? "0\(self)" : "\(self)"
+    }
 }

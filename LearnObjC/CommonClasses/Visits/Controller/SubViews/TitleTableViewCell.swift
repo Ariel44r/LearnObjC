@@ -27,7 +27,7 @@ class TitleTableViewCell: UITableViewCell {
     }
     
     func set(title: String) {
-        self.viewDot.makeViewWith(features: [.roundedView(.full, .clear), .bordered(.black, 2)])
+        self.viewDot.makeViewWith(features: [.roundedView(.full, .clear), .bordered(.white, 1)])
         self.lblTitle.text = title
         
     }

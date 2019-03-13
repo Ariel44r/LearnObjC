@@ -45,7 +45,7 @@ class DetailLocationViewController: UIViewController {
         self.tracks?.forEach({
             let fullString: String = Date(timeIntervalSince1970: $0.arrivalDate).description(with: .autoupdatingCurrent)
             let arrayString: [String] = fullString.replacingOccurrences(of: "Central Standard Time", with: "").components(separatedBy: ",")
-            if ($0.departurDate - $0.arrivalDate) < 3600*24 {
+            if ($0.departurDate - $0.arrivalDate) < 3600*24*2 {
                 titles.append("\(arrayString[0]),\(arrayString[1])")
                 
             }
@@ -56,7 +56,7 @@ class DetailLocationViewController: UIViewController {
 
 }
 
-public extension Sequence where Element: Equatable {
+extension Sequence where Element: Equatable {
     var uniqueElements: [Element] {
         return self.reduce(into: []) {
             uniqueElements, element in

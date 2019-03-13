@@ -28,6 +28,7 @@ class VisitViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.title = "MapView"
+        self.navigationController?.navigationBar.tintColor = .black
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(self.goToDetail))
         self.locationManager.delegate = self
         self.mapView.delegate = self
