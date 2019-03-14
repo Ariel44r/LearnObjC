@@ -36,7 +36,7 @@ class TrackCellTableViewCell: UITableViewCell {
     
     func set(_ trackObject: TrackObject) {
         self.arrivedIndicator.makeViewWith(features: [.roundedView(.full, .clear), .bordered(.black, 1)])
-        self.departureIndicator.makeViewWith(features: [.roundedView(.full, .clear), .bordered(.black, 1), .color(trackObject.iscomplete ? .red : .lightGray)])
+        self.departureIndicator.makeViewWith(features: [.roundedView(.full, .clear), .bordered(.black, 1), .color(trackObject.isComplete ? .red : .lightGray)])
         self.trackObject = trackObject
         self.lblDateNow.text = "notified: \(trackObject.dateNow!)"
             .replacingOccurrences(of: "Central Standard Time", with: "")
@@ -70,6 +70,6 @@ extension Date {
 
 extension Int {
     func zero() -> String {
-        return self == 0 ? "00" : (self < 10) ? "0\(self)" : "\(self)"
+        return self < 10 ? "0\(self)" : "\(self)"
     }
 }

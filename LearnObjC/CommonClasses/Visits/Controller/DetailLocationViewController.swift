@@ -28,10 +28,6 @@ class DetailLocationViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.title = "Tracks List"
-        if #available(iOS 11.0, *) {
-            self.navigationController?.navigationBar.prefersLargeTitles = true
-            self.navigationController?.navigationItem.searchController = UISearchController(searchResultsController: nil)
-        }
         if let _ = self.tracks as [TrackObject]? {
             self.grouppedTracks()
             self.titles =  self.getHeaderTitles()
@@ -48,7 +44,7 @@ class DetailLocationViewController: UIViewController {
             let grouppedTracks: [TrackObject] = self.tracks!.filter({ $0.arrivalDate == arrivalDate || abs($0.arrivalDate - arrivalDate) < 60 })
             if grouppedTracks.count > 1 {
                 grouppedTracks[1].departurDate = grouppedTracks[0].departurDate
-                grouppedTracks[1].iscomplete = true
+                grouppedTracks[1].isComplete = true
                 tempTracks.append(grouppedTracks[1])
                 
             } else {
@@ -62,7 +58,6 @@ class DetailLocationViewController: UIViewController {
     
     func getHeaderTitles() -> [String] {
         self.tracks?.forEach({
-            debugPrint($0.dateNow)
             let fullString: String = Date(timeIntervalSince1970: $0.arrivalDate).description(with: .autoupdatingCurrent)
             let arrayString: [String] = fullString.replacingOccurrences(of: "Central Standard Time", with: "").components(separatedBy: ",")
             self.titles.append("\(arrayString[0]),\(arrayString[1])")

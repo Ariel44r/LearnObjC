@@ -18,7 +18,8 @@ import MapKit
     var latitude: Double!
     var longitude: Double!
     var annotation: MKPointAnnotation?
-    var iscomplete: Bool = false
+    var isComplete: Bool = false
+    
     
     override func map(map: JSON) {
         self.arrivalDate <- map["arrivalDate"]
