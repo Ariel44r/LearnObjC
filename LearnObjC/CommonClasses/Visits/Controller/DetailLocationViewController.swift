@@ -108,8 +108,7 @@ extension DetailLocationViewController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch self.tableDataSource {
-        case .original:
-            return self.tracks!.filter({ $0.dateNow!.contains(self.titles[section]) }).count
+        case .original: return self.tracks!.filter({ $0.dateNow!.contains(self.titles[section]) }).count
         case .filter: return self.filterTracks.count
         }
     }

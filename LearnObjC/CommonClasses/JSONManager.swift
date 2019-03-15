@@ -33,11 +33,10 @@ public class JSONSerializer {
     }
     
     public class func toString<T: Encodable>(with object: T) -> JSONString? {
-        if let jsonData = try? JSONEncoder().encode(object) {
-            if let jsonString: JSONString = String(data: jsonData, encoding: .utf8) {
-                return jsonString
-                
-            }
+        if let jsonData = try? JSONEncoder().encode(object),
+        let jsonString: JSONString = String(data: jsonData, encoding: .utf8) {
+            return jsonString
+            
         }
         return nil
     }

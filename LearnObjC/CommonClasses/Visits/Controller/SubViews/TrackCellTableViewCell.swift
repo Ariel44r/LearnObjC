@@ -41,9 +41,9 @@ class TrackCellTableViewCell: UITableViewCell {
         self.lblDateNow.text = "notified: \(trackObject.dateNow!)"
             .replacingOccurrences(of: "Central Standard Time", with: "")
         let arriveDate: Date = Date(timeIntervalSince1970: trackObject.arrivalDate)
-        self.lblArrive.text = "arrived at: \(arriveDate.get(.hour)):\(arriveDate.get(.minute)):\(arriveDate.get(.second))"
+        self.lblArrive.text = "arrived: \(arriveDate.fullDate)"
         let departureDate: Date = Date(timeIntervalSince1970: trackObject.departurDate)
-        self.lblDepartur.text = "departur at: \(departureDate.get(.hour)):\(departureDate.get(.minute)):\(departureDate.get(.second))"
+        self.lblDepartur.text = "departur\(trackObject.isComplete ? "" : " aprox"): \(departureDate.fullDate)"
         self.willAppear()
         
     }
@@ -51,7 +51,7 @@ class TrackCellTableViewCell: UITableViewCell {
     func willAppear() {
         if let annotation = self.trackObject.annotation as MKPointAnnotation? {
             self.mapView.addAnnotation(annotation)
-            let span = MKCoordinateSpan(latitudeDelta: 0.0008, longitudeDelta: 0.0008)
+            let span = MKCoordinateSpan(latitudeDelta: 0.004, longitudeDelta: 0.004)
             let region = MKCoordinateRegion(center: annotation.coordinate, span: span)
             self.mapView.setRegion(region, animated: false)
             self.mapView.isUserInteractionEnabled = false
@@ -62,10 +62,17 @@ class TrackCellTableViewCell: UITableViewCell {
 }
 
 extension Date {
+    
     func get(_ component: Calendar.Component) -> String {
         return Calendar.current.component(component, from: self).zero()
 
     }
+    
+    var fullDate: String {
+        return "\(self.get(.hour)):\(self.get(.minute)):\(self.get(.second)) - \(self.get(.day))/\(self.get(.month))/\(self.get(.year))"
+        
+    }
+    
 }
 
 extension Int {
