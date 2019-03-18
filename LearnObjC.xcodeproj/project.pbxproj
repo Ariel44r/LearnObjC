@@ -14,6 +14,7 @@
 		B042A1BB21F62052009EAAF4 /* ListadoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B042A1BA21F62052009EAAF4 /* ListadoResponse.swift */; };
 		B042A1BE21F62144009EAAF4 /* Documento.swift in Sources */ = {isa = PBXBuildFile; fileRef = B042A1BD21F62144009EAAF4 /* Documento.swift */; };
 		B042A1C021F64B5C009EAAF4 /* DocumentoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B042A1BF21F64B5C009EAAF4 /* DocumentoResponse.swift */; };
+		B05B08ED223C1E0800DCB218 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B08EC223C1E0800DCB218 /* SearchViewController.swift */; };
 		B05D7C94221474F900A92251 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B05D7C93221474F900A92251 /* Login.storyboard */; };
 		B06A728122383AF200C602CF /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A727F22383AF200C602CF /* TitleTableViewCell.swift */; };
 		B06A728222383AF200C602CF /* TitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B06A728022383AF200C602CF /* TitleTableViewCell.xib */; };
@@ -96,6 +97,7 @@
 		B042A1BA21F62052009EAAF4 /* ListadoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListadoResponse.swift; sourceTree = "<group>"; };
 		B042A1BD21F62144009EAAF4 /* Documento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Documento.swift; sourceTree = "<group>"; };
 		B042A1BF21F64B5C009EAAF4 /* DocumentoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentoResponse.swift; sourceTree = "<group>"; };
+		B05B08EC223C1E0800DCB218 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		B05D7C93221474F900A92251 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		B06A727F22383AF200C602CF /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
 		B06A728022383AF200C602CF /* TitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTableViewCell.xib; sourceTree = "<group>"; };
@@ -377,6 +379,7 @@
 			children = (
 				B0A33E862237311400D6FFDF /* VisitViewController.swift */,
 				B0A33E872237311400D6FFDF /* DetailLocationViewController.swift */,
+				B05B08EC223C1E0800DCB218 /* SearchViewController.swift */,
 				B0A33E882237311400D6FFDF /* SubViews */,
 			);
 			path = Controller;
@@ -704,6 +707,7 @@
 				B09C3F2421DD403A0093C10F /* API.swift in Sources */,
 				B09C3F2021DD3D1D0093C10F /* UIViewExtension.swift in Sources */,
 				B0FF580922011DA30016C1E6 /* SideMenuViewController.swift in Sources */,
+				B05B08ED223C1E0800DCB218 /* SearchViewController.swift in Sources */,
 				B004C26A21E54A7D000AE08C /* UnidadNegocio.swift in Sources */,
 				B0AB3D6221DF30C2003DD464 /* Empresa.swift in Sources */,
 				B042A1BB21F62052009EAAF4 /* ListadoResponse.swift in Sources */,

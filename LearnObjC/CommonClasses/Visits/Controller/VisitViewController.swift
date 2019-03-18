@@ -45,13 +45,13 @@ class VisitViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let controller = segue.destination as! DetailLocationViewController
-        controller.tracks = (sender as! [TrackObject]).sorted(by: { $0.arrivalDate > $1.arrivalDate })
+        controller.tracks = (sender as! [TrackObject])
         
     }
     
     @IBAction func btnCurrentLocation(_ sender: Any) {
-        if CLLocationManager.authorizationStatus() == .authorizedAlways {
-            let region = MKCoordinateRegion(center: self.locationManager.location!.coordinate, span: self.defaultSpan)
+        if CLLocationManager.authorizationStatus() == .authorizedAlways, let location = self.locationManager.location {
+            let region = MKCoordinateRegion(center: location.coordinate, span: self.defaultSpan)
             self.mapView.setRegion(region, animated: true)
             
         }
